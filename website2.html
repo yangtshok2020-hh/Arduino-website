@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arduino Learning Hub</title>
+
+
+
+
+<style>
+
+
+    body {
+     margin: 0;
+     background-color: #F4F4F4; /* Light Gray */
+     font-family: Arial, sans-serif;
+   }
+
+
+  /* 🔹 Top Banner */
+  .top-banner {
+    background-color: #0A3D62;  /* dark Arduino blue */
+    color: white;
+    padding: 60px 40px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+  }
+
+
+
+
+  /* 🔹 Navbar (Top Left) */
+  .navbar {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+
+
+
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+
+
+
+  .navbar a:not(:last-child)::after {
+    content: " | ";
+    color: #00A896;
+  }
+
+
+
+
+  .navbar a:hover {
+    color: #00A896;
+  }
+
+
+
+
+  /* 🔹 Main Title */
+  .top-banner h1 {
+    font-size: 3rem;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+
+
+
+  /* 🔹 Subtitle Container */
+  .animated-subtitle {
+    width: 100%;                  /* fill width under the title */
+    overflow: hidden;             /* hide overflowing text */
+    white-space: nowrap;          /* keep text in one line */
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center;
+    color: #D0F4F4;
+  }
+
+
+
+
+  /* 🔹 Moving Text */
+  .animated-subtitle span {
+    display: inline-block;
+    padding-left: 100%;           /* start from right outside */
+    animation: moveLeft 20s linear infinite;
+  }
+
+
+
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+
+  /* 🔹 Bottom-right Button */
+  .start-btn {
+    background-color: white;
+    color: #00A896;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+  }
+
+
+
+
+  .start-btn:hover {
+    background-color: #00A896;
+    color: white;
+    transform: translateY(-3px);
+  }
+
+
+
+
+
+
+    footer {
+     background-color: #0A3D62; /* Dark Blue */
+     color: white;
+     padding: 40px 0;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+   }
+
+
+   .footer-section {
+     flex: 1;
+     min-width: 220px;
+     margin: 10px;
+     padding: 10px;
+   }
+
+
+   .footer-section h3 {
+     color: #00A896; /* Arduino Accent */
+     border-bottom: 2px solid #00A896;
+     padding-bottom: 5px;
+     margin-bottom: 15px;
+   }
+
+
+   .footer-section ul {
+     list-style: none;
+     padding: 0;
+   }
+
+
+   .footer-section ul li {
+     margin: 8px 0;
+   }
+
+
+   .footer-section ul li a {
+     color: #FFFFFF;
+     text-decoration: none;
+     transition: color 0.3s;
+   }
+
+
+   .footer-section ul li a:hover {
+     color: #00A896; /* Bright Cyan on Hover */
+   }
+
+
+   .social-icons {
+     display: flex;
+     gap: 10px;
+     margin-top: 10px;
+   }
+
+
+   .social-icons a {
+     color: white;
+     font-size: 20px;
+     text-decoration: none;
+     transition: color 0.3s ease;
+   }
+
+
+   .social-icons a:hover {
+     color: #00A896;
+   }
+
+
+   .footer-bottom {
+     text-align: center;
+     background-color: #072B45;
+     color: #D0F4F4;
+     padding: 15px;
+     font-size: 14px;
+   }
+    
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<!-- 🔹 Top Banner -->
+<section class="top-banner">
+
+
+
+
+  <!-- 🔹 Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="basics.html">📘 Basics</a>
+    <a href="projects.html">🔨 Projects</a>
+    <a href="code.html">💻 Code</a>
+    <a href="resources.html">🌐 Resources</a>
+    <a href="about.html">👤 About</a>
+  </nav>
+
+
+
+
+  <!-- 🔹 Main Title -->
+  <h1>Learn the basics before the project</h1>
+
+
+
+
+  <!-- 🔹 Animated Subtitle (Below Title) -->
+  <div class="animated-subtitle">
+    <span>Learn Arduino step by step with simple projects, guides, and code.Learn Arduino step by step with simple projects, guides, and code.</span>
+  </div>
+
+
+
+
+  <!-- 🔹 Bottom-right Button -->
+  <button class="start-btn" onclick="window.location.href='basics.html'">
+    Next →
+  </button>
+</section>
+
+
+
+
+
+<footer>
+   <div class="footer-section">
+     <h3>About Arduino Hub</h3>
+     <p>Learn Arduino step by step with simple projects, guides, and code examples. Explore creativity through technology!</p>
+   </div>
+
+
+   <div class="footer-section">
+     <h3>Quick Links</h3>
+     <ul>
+       <li><a href="#">🏠 Home</a></li>
+       <li><a href="#">📘 Basics</a></li>
+       <li><a href="#">🔨 Projects</a></li>
+       <li><a href="#">💻 Code</a></li>
+       <li><a href="#">🌐 Resources</a></li>
+       <li><a href="#">👤 About</a></li>
+     </ul>
+   </div>
+
+
+   <div class="footer-section">
+     <h3>Contact & Socials</h3>
+     <p>📧 tshering.yangtshokl2023@academy.bt<br>📍 Bhutan</p>
+     <div class="social-icons">
+       <a href="#">🌐</a>
+       <a href="#">💬</a>
+       <a href="#">🐦</a>
+     </div>
+   </div>
+ </footer>
+
+
+ <div class="footer-bottom">
+   © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
+ </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
