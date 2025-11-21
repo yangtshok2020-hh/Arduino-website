@@ -10,13 +10,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F0F4F8;
+  background-color: #F4F4F4; /* light neutral background */
   color: #333;
 }
 
 /* --------- TOP BANNER --------- */
 .top-banner {
-  background: #87CEEB; /* light sky blue */
+  background: #0A3D62; /* dark blue Arduino theme */
   color: white;
   padding: 15px 40px;
   height: 70px;
@@ -45,10 +45,8 @@ body {
 }
 
 .navbar a:hover {
-  color: #FFD166;
+  color: #00A896; /* bright cyan accent for hover */
 }
-
-
 
 /* --------- CONTENT SECTION --------- */
 .content-section {
@@ -65,36 +63,22 @@ body {
 .left-title {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #1E3A8A;
+  color: #0A3D62; /* match theme */
 }
 
 /* PHONE FRAME (thinner) */
 .phone-frame {
-  background: #ffffff;
+  background: #0A3D62; /* match dark blue theme */
   border-radius: 15px;
-  padding: 5px;          /* reduced padding */
-  width: 100px;            /* thinner width */
+  padding: 5px;
+  width: 100px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 .icon-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;               /* smaller gap between icons */
-}
-
-.icon {
-  width: 50px;             /* smaller icon size */
-  height: 50px;
-  border-radius: 12px;
-  font-size: 1.4rem;
-  margin-bottom: 4px;
-}
-
-.icon-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* smaller gaps for compactness */
+  gap: 10px;
 }
 
 .phone-icon {
@@ -114,9 +98,9 @@ body {
 }
 
 .icon {
-  width: 55px; /* smaller icon */
+  width: 55px;
   height: 55px;
-  background: linear-gradient(135deg, #6BC1FF, #81E6D9);
+  background: linear-gradient(135deg, #0A3D62, #074074); /* subtle dark gradient */
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -130,7 +114,7 @@ body {
 .icon-label {
   font-size: 13px;
   font-weight: 600;
-  color: #1E3A8A;
+  color: #00A896; /* bright cyan label for contrast */
 }
 
 /* Animations */
@@ -153,12 +137,12 @@ body {
 
 /* --------- FOOTER --------- */
 footer {
-  background: #E0F2FE;
+  background: #0A3D62; /* dark blue Arduino theme */
   padding: 40px 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: #1E3A8A;
+  color: white;
 }
 
 .footer-section {
@@ -168,14 +152,14 @@ footer {
 }
 
 .footer-section h3 {
-  color: #2563EB;
+  color: #00A896; /* cyan accent headings */
   margin-bottom: 10px;
   font-size: 16px;
 }
 
 .footer-section p,
 .footer-section ul {
-  color: #334155;
+  color: #D0F4F4; /* light text for contrast */
 }
 
 .footer-section ul {
@@ -190,8 +174,8 @@ footer {
 .footer-bottom {
   text-align: center;
   padding: 15px;
-  background-color: #DBEAFE;
-  color: #1E3A8A;
+  background-color: #074074; /* slightly darker blue for footer bottom */
+  color: #D0F4F4;
   font-size: 14px;
 }
 </style>
@@ -211,7 +195,6 @@ footer {
     <a href="about.html">About</a>
   </div>
 </section>
-
 
 <!-- CONTENT -->
 <section class="content-section">
@@ -278,11 +261,3 @@ footer {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
