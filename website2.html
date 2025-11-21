@@ -130,48 +130,69 @@
     transform: translateY(-3px);
   }
 
-.topics-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+
+.phone-frame {
+  width: 320px;
+  max-width: 90%;
+  margin: 0 auto;
+  background: #072B45;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-}
-    /* Instead of height: 180px */
-.topic-card.circle {
-    border-radius: 50%;
-    padding: 30px;  /* let padding define the size */
-    min-width: 180px;
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-gap: 20px;
+  justify-items: center;
 }
 
-
-
-
-.topic-card {
-    transition: transform 0.3s, box-shadow 0.3s;
+.phone-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transform: scale(0);
+  animation: popIn 0.5s forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.topic-card:nth-child(odd) {
-    transform: rotate(-2deg);
+.phone-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.topic-card:nth-child(even) {
-    transform: rotate(2deg);
+.phone-icon .icon {
+  width: 70px;
+  height: 70px;
+  background-color: #00A896;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.topic-card:hover {
-    transform: rotate(0deg) translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    background-color: #D0F4F4;
+.phone-icon .icon-label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+/* Pop-in animation */
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 
@@ -305,50 +326,46 @@
 
   <!-- 🔹 Bottom-right Button -->
   <button class="start-btn" onclick="window.location.href='basics.html'">
-    Next →
-  </button>
-</section>
+<section id="phone-topics" style="padding: 60px 0; background-color: #F4F4F4;">
+  <h1 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 20px;">Arduino Basics</h1>
+  <h2 style="text-align: center; color: #555; font-size: 22px; margin-bottom: 40px;">Pick a Topic</h2>
 
-<section id="basics-section" style="padding: 60px 0; background-color: #F4F4F4;">
-    <h1 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 20px;">Arduino Basics</h1>
-    <h2 style="text-align: center; color: #555; font-size: 22px; margin-bottom: 40px;">
-        Topics
-    </h2>
+  <div class="phone-frame">
+    <div class="icon-grid">
+      <a href="what-is-arduino.html" class="phone-icon" style="--i:0;">
+        <div class="icon">⚡</div>
+        <div class="icon-label">What Is Arduino?</div>
+      </a>
 
-    <div class="topics-container">
-        <a href="what-is-arduino.html" class="topic-card circle">
-            <div class="icon">⚡</div>
-            <div class="title">What Is Arduino?</div>
-        </a>
+      <a href="board-overview.html" class="phone-icon" style="--i:1;">
+        <div class="icon">💡</div>
+        <div class="icon-label">Board Overview</div>
+      </a>
 
-        <a href="board-overview.html" class="topic-card rounded-square">
-            <div class="icon">💡</div>
-            <div class="title">Arduino Board Overview</div>
-        </a>
+      <a href="components.html" class="phone-icon" style="--i:2;">
+        <div class="icon">🔧</div>
+        <div class="icon-label">Components</div>
+      </a>
 
-        <a href="components.html" class="topic-card rectangle">
-            <div class="icon">🔧</div>
-            <div class="title">Basic Electronic Components</div>
-        </a>
+      <a href="setup-installation.html" class="phone-icon" style="--i:3;">
+        <div class="icon">💻</div>
+        <div class="icon-label">Install IDE</div>
+      </a>
 
-        <a href="setup-installation.html" class="topic-card circle">
-            <div class="icon">💻</div>
-            <div class="title">Installing Arduino IDE</div>
-        </a>
+      <a href="first-program.html" class="phone-icon" style="--i:4;">
+        <div class="icon">🖥️</div>
+        <div class="icon-label">First Program</div>
+      </a>
 
-        <a href="first-program.html" class="topic-card rounded-square">
-            <div class="icon">🖥️</div>
-            <div class="title">Your First Arduino Program</div>
-        </a>
-
-        <a href="setup-loop.html" class="topic-card rectangle">
-            <div class="icon">🔄</div>
-            <div class="title">Understanding setup() & loop()</div>
-        </a>
+      <a href="setup-loop.html" class="phone-icon" style="--i:5;">
+        <div class="icon">🔄</div>
+        <div class="icon-label">setup() & loop()</div>
+      </a>
     </div>
+  </div>
 </section>
 
-
+<style>
 
 
 
@@ -393,6 +410,7 @@
 
 </body>
 </html>
+
 
 
 
