@@ -134,6 +134,37 @@ body {
   100% { transform: translateY(0) scale(1); opacity: 1; }
 }
 
+.content-section {
+  padding: 80px 0;
+  display: flex;
+  background-color: #F4F4F4;
+}
+
+.left-panel {
+  width: 380px;
+  padding-left: 50px;
+}
+
+.left-title {
+  color: #333;
+  font-size: 40px;
+  margin: 0 0 5px 0;
+}
+
+.left-subtitle {
+  color: #555;
+  font-size: 22px;
+  margin: 0 0 30px 0;
+}
+
+/* Right side content space */
+.right-panel {
+  flex: 1;
+  padding: 50px;
+  background: transparent;
+}
+
+
 /* FOOTER */
 footer {
   background-color: #0A3D62;
@@ -193,12 +224,10 @@ footer {
 </section>
 
 <!-- PHONE TOPICS LEFT SIDE -->
-<section style="padding: 80px 0; background-color: #F4F4F4; display: flex;">
-
-  <!-- LEFT SIDE: PHONE ICONS -->
-  <div>
-    <h1 style="color:#333; margin-left:80px; font-size:40px;">Arduino Basics</h1>
-    <h2 style="color:#555; margin-left:80px; font-size:22px;">Pick a Topic</h2>
+<section class="content-section">
+  <div class="left-panel">
+    <h1 class="left-title">Arduino Basics</h1>
+    <h2 class="left-subtitle">Pick a Topic</h2>
 
     <div class="phone-frame">
       <div class="icon-grid">
@@ -237,11 +266,9 @@ footer {
     </div>
   </div>
 
-  <!-- RIGHT SIDE (EMPTY FOR NOW – You can add content later) -->
-  <div style="flex:1; padding:50px;">
-    <!-- We can add tutorials, images, animations, etc here -->
+  <div class="right-panel">
+    <!-- Add images, animations or text here later -->
   </div>
-
 </section>
 
 
@@ -270,4 +297,5 @@ footer {
 
 </body>
 </html>
+
 
