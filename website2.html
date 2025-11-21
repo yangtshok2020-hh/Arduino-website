@@ -10,16 +10,16 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F0F4F8; /* soft light background */
+  background-color: #F0F4F8;
   color: #333;
 }
 
 /* --------- TOP BANNER --------- */
 .top-banner {
-  background: linear-gradient(135deg, #6BC1FF, #81E6D9); /* soft gradient */
+  background: linear-gradient(135deg, #6BC1FF, #81E6D9);
   color: #fff;
   padding: 15px 40px;
-  height: 70px; /* thinner banner */
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +50,6 @@ body {
 
 
 
-
 /* --------- CONTENT SECTION --------- */
 .content-section {
   display: flex;
@@ -60,27 +59,27 @@ body {
 
 /* LEFT PANEL */
 .left-panel {
-  width: 380px;
+  width: 280px; /* smaller width for thinner look */
 }
 
 .left-title {
-  font-size: 38px;
+  font-size: 36px;
   margin-bottom: 20px;
   color: #1E3A8A;
 }
 
-/* PHONE FRAME */
+/* PHONE FRAME (thinner) */
 .phone-frame {
-  background: #ffffff; /* clean white card */
-  border-radius: 25px;
-  padding: 20px 15px; /* thinner padding */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px 10px; /* reduced padding */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .icon-grid {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px; /* smaller gaps for compactness */
 }
 
 .phone-icon {
@@ -96,25 +95,25 @@ body {
 
 .phone-icon:hover {
   transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
 }
 
 .icon {
-  width: 65px;
-  height: 65px;
+  width: 55px; /* smaller icon */
+  height: 55px;
   background: linear-gradient(135deg, #6BC1FF, #81E6D9);
-  border-radius: 18px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  margin-bottom: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   animation: float 3s ease-in-out infinite;
 }
 
 .icon-label {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #1E3A8A;
 }
@@ -139,7 +138,7 @@ body {
 
 /* --------- FOOTER --------- */
 footer {
-  background: #E0F2FE; /* light soft blue */
+  background: #E0F2FE;
   padding: 40px 50px;
   display: flex;
   justify-content: space-around;
@@ -197,7 +196,6 @@ footer {
     <a href="about.html">About</a>
   </div>
 </section>
-
 
 
 <!-- CONTENT -->
@@ -265,5 +263,3 @@ footer {
 
 </body>
 </html>
-
-
