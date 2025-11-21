@@ -18,46 +18,37 @@ body {
 .top-banner {
   background: linear-gradient(135deg, #6BC1FF, #81E6D9); /* soft gradient */
   color: #fff;
-  padding: 20px 40px;
-  position: relative;
-  height: 180px;
+  padding: 15px 40px;
+  height: 70px; /* thinner banner */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
 .navbar {
-  position: absolute;
-  top: 20px;
-  left: 30px;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
-  margin-right: 15px;
   font-weight: 600;
   transition: 0.3s;
-}
-
-.navbar a:not(:last-child)::after {
-  content: " | ";
-  color: #fff8;
 }
 
 .navbar a:hover {
   color: #FFD166;
 }
 
-.top-banner h1 {
-  font-size: 2.8rem;
-  text-align: center;
-  margin: 0;
-}
-
-/* --------- BUTTON --------- */
+/* --------- START BUTTON --------- */
 .start-btn {
   background: linear-gradient(135deg, #FFD166, #FF9F1C);
   color: white;
@@ -68,7 +59,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
-  margin-top: 20px;
+  margin: 30px 40px;
   box-shadow: 0 5px 15px rgba(255,159,28,0.4);
 }
 
@@ -80,7 +71,7 @@ body {
 /* --------- CONTENT SECTION --------- */
 .content-section {
   display: flex;
-  padding: 80px 50px;
+  padding: 60px 50px;
   gap: 50px;
 }
 
@@ -91,28 +82,22 @@ body {
 
 .left-title {
   font-size: 38px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   color: #1E3A8A;
-}
-
-.left-subtitle {
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: #475569;
 }
 
 /* PHONE FRAME */
 .phone-frame {
   background: #ffffff; /* clean white card */
-  border-radius: 35px;
-  padding: 30px 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-radius: 25px;
+  padding: 20px 15px; /* thinner padding */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .icon-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .phone-icon {
@@ -120,29 +105,28 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #fff;
   transform: translateY(50px) scale(0);
   animation: popIn 0.6s forwards;
-  animation-delay: calc(var(--i) * 0.15s);
+  animation-delay: calc(var(--i) * 0.12s);
   transition: 0.3s ease;
 }
 
 .phone-icon:hover {
-  transform: scale(1.12) rotate(-2deg);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   background: linear-gradient(135deg, #6BC1FF, #81E6D9);
-  border-radius: 20px;
+  border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  margin-bottom: 8px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   animation: float 3s ease-in-out infinite;
 }
 
@@ -155,20 +139,19 @@ body {
 /* Animations */
 @keyframes popIn {
   0% { transform: translateY(50px) scale(0); opacity: 0; }
-  60% { transform: translateY(-10px) scale(1.2); opacity: 1; }
+  60% { transform: translateY(-8px) scale(1.15); opacity: 1; }
   100% { transform: translateY(0) scale(1); opacity: 1; }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-4px); }
 }
 
 /* RIGHT PANEL */
 .right-panel {
   flex: 1;
   padding: 30px;
-  background: transparent;
 }
 
 /* --------- FOOTER --------- */
@@ -210,7 +193,7 @@ footer {
 .footer-bottom {
   text-align: center;
   padding: 15px;
-  background-color: #DBEAFE; /* lighter footer bottom */
+  background-color: #DBEAFE;
   color: #1E3A8A;
   font-size: 14px;
 }
@@ -221,24 +204,24 @@ footer {
 
 <!-- TOP BANNER -->
 <section class="top-banner">
-  <nav class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="basics.html">📘 Basics</a>
-    <a href="projects.html">🔨 Projects</a>
-    <a href="code.html">💻 Code</a>
-    <a href="resources.html">🌐 Resources</a>
-    <a href="about.html">👤 About</a>
-  </nav>
-
-  <h1>Learn the basics before the project</h1>
-  <button class="start-btn" onclick="window.location.href='basics.html'">Start Learning →</button>
+  <div class="logo">Arduino Hub</div>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="basics.html">Basics</a>
+    <a href="projects.html">Projects</a>
+    <a href="code.html">Code</a>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About</a>
+  </div>
 </section>
+
+<!-- START LEARNING BUTTON -->
+<button class="start-btn" onclick="window.location.href='basics.html'">Start Learning →</button>
 
 <!-- CONTENT -->
 <section class="content-section">
   <div class="left-panel">
     <h1 class="left-title">Arduino Basics</h1>
-    <h2 class="left-subtitle">Pick a Topic</h2>
 
     <div class="phone-frame">
       <div class="icon-grid">
@@ -271,7 +254,7 @@ footer {
   </div>
 
   <div class="right-panel">
-    <!-- Optional: content for the right side -->
+    <!-- Optional right-side content -->
   </div>
 </section>
 
