@@ -6,21 +6,26 @@
 <title>Arduino Learning Hub</title>
 
 <style>
-
+/* --------- BASE --------- */
 body {
   margin: 0;
-  background-color: #F4F4F4;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F0F4F8; /* soft light background */
+  color: #333;
 }
 
-/* TOP BANNER */
+/* --------- TOP BANNER --------- */
 .top-banner {
-  background-color: #0A3D62;
-  color: white;
+  background: linear-gradient(135deg, #6BC1FF, #81E6D9); /* soft gradient */
+  color: #fff;
   padding: 20px 40px;
   position: relative;
   height: 180px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .navbar {
@@ -30,75 +35,92 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-right: 15px;
-  font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 .navbar a:not(:last-child)::after {
   content: " | ";
-  color: #00A896;
+  color: #fff8;
 }
 
 .navbar a:hover {
-  color: #00A896;
+  color: #FFD166;
 }
 
 .top-banner h1 {
-  font-size: 3rem;
-  margin-top: 60px;
+  font-size: 2.8rem;
   text-align: center;
+  margin: 0;
 }
 
-/* BUTTON */
+/* --------- BUTTON --------- */
 .start-btn {
-  background-color: white;
-  color: #00A896;
+  background: linear-gradient(135deg, #FFD166, #FF9F1C);
+  color: white;
   border: none;
-  padding: 15px 30px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(255,159,28,0.4);
 }
 
 .start-btn:hover {
-  background-color: #00A896;
-  color: white;
   transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255,159,28,0.5);
+}
+
+/* --------- CONTENT SECTION --------- */
+.content-section {
+  display: flex;
+  padding: 80px 50px;
+  gap: 50px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 380px;
+}
+
+.left-title {
+  font-size: 38px;
+  margin-bottom: 5px;
+  color: #1E3A8A;
+}
+
+.left-subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #475569;
 }
 
 /* PHONE FRAME */
 .phone-frame {
-  width: 300px;
-  margin-left: 80px;
-  margin-top: 40px;
+  background: #ffffff; /* clean white card */
+  border-radius: 35px;
   padding: 30px 20px;
-  background: linear-gradient(145deg, #072B45, #0A3D62);
-  border-radius: 40px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
 
 .icon-grid {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
-
 
 .phone-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #fff;
   transform: translateY(50px) scale(0);
   animation: popIn 0.6s forwards;
   animation-delay: calc(var(--i) * 0.15s);
@@ -106,73 +128,57 @@ body {
 }
 
 .phone-icon:hover {
-  transform: scale(1.15) rotate(-3deg);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.35);
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #00A896, #00FFC8);
-  border-radius: 25px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #6BC1FF, #81E6D9);
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
-  margin-bottom: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  font-size: 2rem;
+  margin-bottom: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;
 }
 
 .icon-label {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
+  color: #1E3A8A;
 }
 
+/* Animations */
 @keyframes popIn {
   0% { transform: translateY(50px) scale(0); opacity: 0; }
   60% { transform: translateY(-10px) scale(1.2); opacity: 1; }
   100% { transform: translateY(0) scale(1); opacity: 1; }
 }
 
-.content-section {
-  padding: 80px 0;
-  display: flex;
-  background-color: #F4F4F4;
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
 }
 
-.left-panel {
-  width: 380px;
-  padding-left: 50px;
-}
-
-.left-title {
-  color: #333;
-  font-size: 40px;
-  margin: 0 0 5px 0;
-}
-
-.left-subtitle {
-  color: #555;
-  font-size: 22px;
-  margin: 0 0 30px 0;
-}
-
-/* Right side content space */
+/* RIGHT PANEL */
 .right-panel {
   flex: 1;
-  padding: 50px;
+  padding: 30px;
   background: transparent;
 }
 
-
-/* FOOTER */
+/* --------- FOOTER --------- */
 footer {
-  background-color: #0A3D62;
-  color: white;
-  padding: 40px 0;
+  background: #E0F2FE; /* light soft blue */
+  padding: 40px 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: #1E3A8A;
 }
 
 .footer-section {
@@ -182,9 +188,14 @@ footer {
 }
 
 .footer-section h3 {
-  color: #00A896;
-  border-bottom: 2px solid #00A896;
-  padding-bottom: 5px;
+  color: #2563EB;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+  color: #334155;
 }
 
 .footer-section ul {
@@ -192,20 +203,23 @@ footer {
   padding: 0;
 }
 
+.footer-section ul li {
+  margin: 6px 0;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 15px;
-  background-color: #072B45;
-  color: #D0F4F4;
+  background-color: #DBEAFE; /* lighter footer bottom */
+  color: #1E3A8A;
   font-size: 14px;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- BANNER -->
+<!-- TOP BANNER -->
 <section class="top-banner">
   <nav class="navbar">
     <a href="index.html">🏠 Home</a>
@@ -217,13 +231,10 @@ footer {
   </nav>
 
   <h1>Learn the basics before the project</h1>
-
-  <button class="start-btn" onclick="window.location.href='basics.html'">
-    Start Learning →
-  </button>
+  <button class="start-btn" onclick="window.location.href='basics.html'">Start Learning →</button>
 </section>
 
-<!-- PHONE TOPICS LEFT SIDE -->
+<!-- CONTENT -->
 <section class="content-section">
   <div class="left-panel">
     <h1 class="left-title">Arduino Basics</h1>
@@ -231,46 +242,38 @@ footer {
 
     <div class="phone-frame">
       <div class="icon-grid">
-
         <a href="what-is-arduino.html" class="phone-icon" style="--i:0;">
           <div class="icon">⚡</div>
           <div class="icon-label">What Is Arduino?</div>
         </a>
-
         <a href="board-overview.html" class="phone-icon" style="--i:1;">
           <div class="icon">💡</div>
           <div class="icon-label">Board Overview</div>
         </a>
-
         <a href="components.html" class="phone-icon" style="--i:2;">
           <div class="icon">🔧</div>
           <div class="icon-label">Components</div>
         </a>
-
         <a href="setup-installation.html" class="phone-icon" style="--i:3;">
           <div class="icon">💻</div>
           <div class="icon-label">Install IDE</div>
         </a>
-
         <a href="first-program.html" class="phone-icon" style="--i:4;">
           <div class="icon">🖥️</div>
           <div class="icon-label">First Program</div>
         </a>
-
         <a href="setup-loop.html" class="phone-icon" style="--i:5;">
           <div class="icon">🔄</div>
           <div class="icon-label">setup() & loop()</div>
         </a>
-
       </div>
     </div>
   </div>
 
   <div class="right-panel">
-    <!-- Add images, animations or text here later -->
+    <!-- Optional: content for the right side -->
   </div>
 </section>
-
 
 <!-- FOOTER -->
 <footer>
@@ -297,5 +300,3 @@ footer {
 
 </body>
 </html>
-
-
