@@ -13,6 +13,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* TOP BANNER */
 .top-banner {
   background-color: #0A3D62;
   color: white;
@@ -52,7 +53,7 @@ body {
   text-align: center;
 }
 
-/* Button */
+/* BUTTON */
 .start-btn {
   background-color: white;
   color: #00A896;
@@ -74,11 +75,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* Phone Frame */
+/* PHONE FRAME */
 .phone-frame {
   width: 360px;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 30px 20px;
   background: linear-gradient(145deg, #072B45, #0A3D62);
   border-radius: 40px;
@@ -91,7 +91,7 @@ body {
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(2, 120px);
-  grid-gap: 25px;
+  gap: 25px;
   justify-items: center;
 }
 
@@ -104,7 +104,7 @@ body {
   transform: translateY(50px) scale(0);
   animation: popIn 0.6s forwards;
   animation-delay: calc(var(--i) * 0.15s);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .phone-icon:hover {
@@ -112,7 +112,7 @@ body {
   box-shadow: 0 15px 25px rgba(0,0,0,0.35);
 }
 
-.phone-icon .icon {
+.icon {
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, #00A896, #00FFC8);
@@ -123,14 +123,11 @@ body {
   font-size: 2.5rem;
   margin-bottom: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  animation: float 3s ease-in-out infinite;
 }
 
-.phone-icon .icon-label {
-  text-align: center;
-  font-weight: bold;
+.icon-label {
   font-size: 14px;
-  color: white;
+  font-weight: bold;
 }
 
 @keyframes popIn {
@@ -139,13 +136,7 @@ body {
   100% { transform: translateY(0) scale(1); opacity: 1; }
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #0A3D62;
   color: white;
@@ -159,14 +150,12 @@ footer {
   flex: 1;
   min-width: 220px;
   margin: 10px;
-  padding: 10px;
 }
 
 .footer-section h3 {
   color: #00A896;
   border-bottom: 2px solid #00A896;
   padding-bottom: 5px;
-  margin-bottom: 15px;
 }
 
 .footer-section ul {
@@ -174,41 +163,11 @@ footer {
   padding: 0;
 }
 
-.footer-section ul li {
-  margin: 8px 0;
-}
-
-.footer-section ul li a {
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-section ul li a:hover {
-  color: #00A896;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #00A896;
-}
-
 .footer-bottom {
   text-align: center;
+  padding: 15px;
   background-color: #072B45;
   color: #D0F4F4;
-  padding: 15px;
   font-size: 14px;
 }
 
@@ -217,9 +176,8 @@ footer {
 
 <body>
 
-<!-- TOP BANNER -->
+<!-- BANNER -->
 <section class="top-banner">
-
   <nav class="navbar">
     <a href="index.html">🏠 Home</a>
     <a href="basics.html">📘 Basics</a>
@@ -234,43 +192,42 @@ footer {
   <button class="start-btn" onclick="window.location.href='basics.html'">
     Start Learning →
   </button>
-
 </section>
 
-<!-- PHONE TOPIC SECTION -->
-<section id="phone-topics" style="padding: 80px 0; background-color: #F4F4F4;">
-  <h1 style="text-align:center; color:#333; font-size:40px;">Arduino Basics</h1>
-  <h2 style="text-align:center; color:#555; font-size:22px; margin-bottom:50px;">Pick a Topic</h2>
+<!-- PHONE ICONS -->
+<section style="text-align:center; padding: 40px;">
+  <h1 style="color:#333;">Arduino Basics</h1>
+  <h2 style="color:#555;">Pick a Topic</h2>
 
   <div class="phone-frame">
     <div class="icon-grid">
 
-      <a href="what-is-arduino.html" class="phone-icon" style="--i:0;">
+      <a class="phone-icon" style="--i:0;" href="what-is-arduino.html">
         <div class="icon">⚡</div>
-        <div class="icon-label">What Is Arduino?</div>
+        <div class="icon-label">What is Arduino</div>
       </a>
 
-      <a href="board-overview.html" class="phone-icon" style="--i:1;">
+      <a class="phone-icon" style="--i:1;" href="board-overview.html">
         <div class="icon">💡</div>
         <div class="icon-label">Board Overview</div>
       </a>
 
-      <a href="components.html" class="phone-icon" style="--i:2;">
+      <a class="phone-icon" style="--i:2;" href="components.html">
         <div class="icon">🔧</div>
         <div class="icon-label">Components</div>
       </a>
 
-      <a href="setup-installation.html" class="phone-icon" style="--i:3;">
+      <a class="phone-icon" style="--i:3;" href="setup-installation.html">
         <div class="icon">💻</div>
         <div class="icon-label">Install IDE</div>
       </a>
 
-      <a href="first-program.html" class="phone-icon" style="--i:4;">
+      <a class="phone-icon" style="--i:4;" href="first-program.html">
         <div class="icon">🖥️</div>
         <div class="icon-label">First Program</div>
       </a>
 
-      <a href="setup-loop.html" class="phone-icon" style="--i:5;">
+      <a class="phone-icon" style="--i:5;" href="setup-loop.html">
         <div class="icon">🔄</div>
         <div class="icon-label">setup() & loop()</div>
       </a>
@@ -283,29 +240,18 @@ footer {
 <footer>
   <div class="footer-section">
     <h3>About Arduino Hub</h3>
-    <p>Learn Arduino step by step with simple projects, guides, and code examples.</p>
+    <p>Learn Arduino step by step with simple guides and projects.</p>
   </div>
 
   <div class="footer-section">
     <h3>Quick Links</h3>
     <ul>
-      <li><a href="#">🏠 Home</a></li>
-      <li><a href="#">📘 Basics</a></li>
-      <li><a href="#">🔨 Projects</a></li>
-      <li><a href="#">💻 Code</a></li>
-      <li><a href="#">🌐 Resources</a></li>
-      <li><a href="#">👤 About</a></li>
+      <li>Home</li>
+      <li>Basics</li>
+      <li>Projects</li>
+      <li>Resources</li>
+      <li>About</li>
     </ul>
-  </div>
-
-  <div class="footer-section">
-    <h3>Contact & Socials</h3>
-    <p>📧 tshering.yangtshokl2023@academy.bt<br>📍 Bhutan</p>
-    <div class="social-icons">
-      <a href="#">🌐</a>
-      <a href="#">💬</a>
-      <a href="#">🐦</a>
-    </div>
   </div>
 </footer>
 
