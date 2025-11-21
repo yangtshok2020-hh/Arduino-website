@@ -132,44 +132,48 @@
 
 .topics-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.topic-card {
-    background: #FFFFFF;
-    color: #333333;
-    text-decoration: none;
+}
+    /* Instead of height: 180px */
+.topic-card.circle {
+    border-radius: 50%;
+    padding: 30px;  /* let padding define the size */
+    min-width: 180px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.topic-card .icon {
-    font-size: 2.5rem;
-    color: #00A896;
-    margin-bottom: 15px;
+
+
+
+.topic-card {
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Different Shapes */
-.topic-card.circle { border-radius: 50%; height: 180px; }
-.topic-card.rounded-square { border-radius: 25px; }
-.topic-card.rectangle { border-radius: 12px; }
+.topic-card:nth-child(odd) {
+    transform: rotate(-2deg);
+}
 
-/* Hover Effect */
+.topic-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
 .topic-card:hover {
-    transform: translateY(-8px);
+    transform: rotate(0deg) translateY(-8px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    background-color: #D0F4F4; /* light cyan hover effect */
+    background-color: #D0F4F4;
 }
+
 
 
 
@@ -389,6 +393,7 @@
 
 </body>
 </html>
+
 
 
 
