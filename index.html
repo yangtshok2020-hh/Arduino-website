@@ -13,61 +13,62 @@ body {
   color: #333;
 }
 
-/* 🔹 Top Banner */
-.top-banner {
-  background: url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+/* 🔹 Thin Top Banner (Logo + Navbar) */
+.top-bar {
+  background-color: #0A3D62; /* Dark Arduino Blue */
   color: white;
-  padding: 20px 40px;
-  font-family: Arial, sans-serif;
-  position: relative;
-  height: 120px; /* thinner banner */
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 40px;
 }
 
-/* 🔹 Logo */
-.logo {
+.top-bar .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
-/* 🔹 Navbar */
-.navbar {
+.top-bar .navbar {
   display: flex;
   gap: 20px;
 }
 
-.navbar a {
+.top-bar .navbar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.top-bar .navbar a:hover {
   color: #00A896;
 }
 
-/* 🔹 Main Title and Subtitle */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* 🔹 Main Banner (Image + Title + Subtitle) */
+.main-banner {
+  background: url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  position: relative;
 }
 
-.banner-text h1 {
+.main-banner h1 {
+  font-size: 2.5rem;
   margin: 0;
-  font-size: 2rem;
   font-weight: bold;
 }
 
-.banner-text p {
-  margin-top: 5px;
+.main-banner p {
+  margin-top: 10px;
   font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.5;
   color: #D0F4F4;
 }
 
@@ -169,8 +170,8 @@ footer {
 </head>
 <body>
 
-<!-- 🔹 Top Banner -->
-<section class="top-banner">
+<!-- 🔹 Top Thin Banner -->
+<div class="top-bar">
   <div class="logo">Arduino Hub</div>
   <nav class="navbar">
     <a href="#">Home</a>
@@ -180,11 +181,12 @@ footer {
     <a href="#">Resources</a>
     <a href="#">About</a>
   </nav>
+</div>
 
-  <div class="banner-text">
-    <h1>Welcome to the Arduino Learning Hub</h1>
-    <p>Learn Arduino step by step with simple projects, guides, and code.Learn Arduino step by step with simple projects, guides, and code.</p>
-  </div>
+<!-- 🔹 Main Banner -->
+<section class="main-banner">
+  <h1>Welcome to the Arduino Learning Hub</h1>
+  <p>Learn Arduino step by step with simple projects, guides, and code. Learn Arduino step by step with simple projects, guides, and code.</p>
 </section>
 
 <!-- --- Interactive Info Cards --- -->
@@ -246,6 +248,7 @@ footer {
  </div>
 </section>
 
+<!-- 🔹 Footer -->
 <footer>
  <div class="footer-section">
    <h3>About Arduino Hub</h3>
@@ -276,4 +279,3 @@ footer {
 
 </body>
 </html>
-
