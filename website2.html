@@ -7,7 +7,6 @@
 
 <style>
 /* --------- BASE --------- */
-
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -15,9 +14,9 @@ body {
   color: #333;
 }
 
-/* 🔹 Thin Top Banner (Logo + Navbar) */
+/* 🔹 Top Thin Banner (Logo + Navbar) */
 .top-bar {
-  background-color: #0A3D62; /* Dark Arduino Blue */
+  background-color: #0A3D62;
   color: white;
   height: 60px;
   display: flex;
@@ -47,7 +46,7 @@ body {
   color: #00A896;
 }
 
-/* 🔹 Main Banner (Image + Title + Subtitle) */
+/* 🔹 Main Banner */
 .main-banner {
   background: url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
   color: white;
@@ -57,7 +56,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 .main-banner h1 {
@@ -66,13 +64,6 @@ body {
   font-weight: bold;
 }
 
-.main-banner p {
-  margin-top: 10px;
-  font-size: 1rem;
-  max-width: 800px;
-  line-height: 1.5;
-  color: #D0F4F4;
-}
 /* --------- CONTENT SECTION --------- */
 .content-section {
   display: flex;
@@ -82,18 +73,18 @@ body {
 
 /* LEFT PANEL */
 .left-panel {
-  width: 280px; /* smaller width for thinner look */
+  width: 280px;
 }
 
 .left-title {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #0A3D62; /* match theme */
+  color: #0A3D62;
 }
 
-/* PHONE FRAME (thinner, lighter than banner) */
+/* PHONE FRAME */
 .phone-frame {
-  background: #1A4F8B; /* lighter than banner for contrast */
+  background: #1A4F8B;
   border-radius: 15px;
   padding: 5px;
   width: 100px;
@@ -125,7 +116,7 @@ body {
 .icon {
   width: 55px;
   height: 55px;
-  background: linear-gradient(135deg, #2A65A3, #3B7BB8); /* lighter gradient than banner */
+  background: linear-gradient(135deg, #2A65A3, #3B7BB8);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -139,7 +130,7 @@ body {
 .icon-label {
   font-size: 13px;
   font-weight: 600;
-  color: #A5E0FF; /* light cyan for labels, stands out on button */
+  color: #A5E0FF;
 }
 
 /* Animations */
@@ -154,56 +145,7 @@ body {
   50% { transform: translateY(-4px); }
 }
 
-/* RIGHT PANEL */
-.right-panel {
-  flex: 1;
-  padding: 30px;
-}
-
-/* --------- FOOTER --------- */
-footer {
-  background: #0A3D62; /* dark blue Arduino theme */
-  padding: 40px 50px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  color: white;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-  margin: 10px;
-}
-
-.footer-section h3 {
-  color: #00A896; /* cyan accent headings */
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.footer-section p,
-.footer-section ul {
-  color: #D0F4F4; /* light text for contrast */
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 6px 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 15px;
-  background-color: #074074; /* slightly darker blue for footer bottom */
-  color: #D0F4F4;
-  font-size: 14px;
-}
-
+/* ARDUINO INFO NEXT TO PHONE FRAME */
 .flex-container {
   display: flex;
   gap: 30px;
@@ -211,17 +153,19 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Adjust width so phone frame and info box sit side by side */
-.phone-frame {
-  flex: 0 0 120px; /* fixed width for phone frame */
-}
-
+/* Info Box */
 .arduino-info {
   flex: 1;
   min-width: 250px;
-  margin-top: 0; /* aligned with phone frame */
 }
 
+.info-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0A3D62;
+}
+
+/* Circle image + description container */
 .info-box {
   display: flex;
   align-items: center;
@@ -265,7 +209,7 @@ footer {
   border-color: #007B66;
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
   .flex-container {
     flex-direction: column;
@@ -286,16 +230,56 @@ footer {
     height: 100px;
   }
 }
+
+/* FOOTER */
+footer {
+  background: #0A3D62;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  color: #00A896;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+  color: #D0F4F4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background-color: #074074;
+  color: #D0F4F4;
+  font-size: 14px;
+}
 </style>
 </head>
 
-
-  
-  
-  <body>
+<body>
 
 <!-- TOP BANNER -->
-<!-- 🔹 Top Thin Banner -->
 <div class="top-bar">
   <div class="logo">Arduino Hub</div>
   <nav class="navbar"> 
@@ -308,7 +292,7 @@ footer {
   </nav>
 </div>
 
-<!-- 🔹 Main Banner -->
+<!-- MAIN BANNER -->
 <section class="main-banner">
   <h1>Arduino Learning Hub</h1>
 </section>
@@ -318,43 +302,8 @@ footer {
   <div class="left-panel">
     <h1 class="left-title">Arduino Basics</h1>
 
-    <div class="phone-frame">
-      <div class="icon-grid">
-        <a href="board-overview.html" class="phone-icon" style="--i:1;">
-          <div class="icon">💡</div>
-          <div class="icon-label">Board Overview</div>
-        </a>
-        <a href="components.html" class="phone-icon" style="--i:2;">
-          <div class="icon">🔧</div>
-          <div class="icon-label">Components</div>
-        </a>
-        <a href="setup-installation.html" class="phone-icon" style="--i:3;">
-          <div class="icon">💻</div>
-          <div class="icon-label">Install IDE</div>
-        </a>
-        <a href="first-program.html" class="phone-icon" style="--i:4;">
-          <div class="icon">🖥️</div>
-          <div class="icon-label">First Program</div>
-        </a>
-        <a href="setup-loop.html" class="phone-icon" style="--i:5;">
-          <div class="icon">🔄</div>
-          <div class="icon-label">setup() & loop()</div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="right-panel">
-    <!-- Optional right-side content -->
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="left-panel">
-    <h1 class="left-title">Arduino Basics</h1>
-
     <div class="flex-container">
-      <!-- Phone Frame with Icons -->
+      <!-- PHONE FRAME -->
       <div class="phone-frame">
         <div class="icon-grid">
           <a href="board-overview.html" class="phone-icon" style="--i:1;">
@@ -380,7 +329,7 @@ footer {
         </div>
       </div>
 
-      <!-- Arduino Info Box -->
+      <!-- ARDUINO INFO -->
       <div class="arduino-info">
         <h2 class="info-title">What is Arduino?</h2>
         <div class="info-box">
@@ -393,6 +342,7 @@ footer {
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="right-panel">
@@ -425,9 +375,3 @@ footer {
 
 </body>
 </html>
-
-
-
-
-
-
