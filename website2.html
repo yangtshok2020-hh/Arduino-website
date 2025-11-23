@@ -6,7 +6,6 @@
 <title>Arduino Learning Hub</title>
 
 <style>
-/* --------- BASE --------- */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -14,7 +13,7 @@ body {
   color: #333;
 }
 
-/* 🔹 Top Thin Banner (Logo + Navbar) */
+/* Top Banner */
 .top-bar {
   background-color: #0A3D62;
   color: white;
@@ -25,78 +24,38 @@ body {
   padding: 0 40px;
 }
 
-.top-bar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+.top-bar .logo { font-size: 1.5rem; font-weight: bold; }
+.top-bar .navbar { display: flex; gap: 20px; }
+.top-bar .navbar a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.top-bar .navbar a:hover { color: #00A896; }
 
-.top-bar .navbar {
-  display: flex;
-  gap: 20px;
-}
-
-.top-bar .navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.top-bar .navbar a:hover {
-  color: #00A896;
-}
-
-/* 🔹 Main Banner */
+/* Main Banner */
 .main-banner {
   background: url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
   color: white;
   height: 300px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-.main-banner h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: bold;
-}
+.main-banner h1 { font-size: 2.5rem; margin: 0; font-weight: bold; }
 
-/* --------- CONTENT SECTION --------- */
-.content-section {
-  display: flex;
-  padding: 60px 50px;
-  gap: 50px;
-}
+/* Content Section */
+.content-section { display: flex; padding: 60px 50px; gap: 50px; flex-wrap: wrap; }
+.left-panel { width: 280px; }
+.left-title { font-size: 36px; margin-bottom: 20px; color: #0A3D62; }
 
-/* LEFT PANEL */
-.left-panel {
-  width: 280px;
-}
-
-.left-title {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #0A3D62;
-}
-
-/* PHONE FRAME */
+/* Phone Frame */
 .phone-frame {
   background: #1A4F8B;
   border-radius: 15px;
   padding: 5px;
-  width: 100px;
+  width: 120px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-.icon-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+.icon-grid { display: flex; flex-direction: column; gap: 10px; }
 .phone-icon {
   display: flex;
   flex-direction: column;
@@ -107,15 +66,10 @@ body {
   animation-delay: calc(var(--i) * 0.12s);
   transition: 0.3s ease;
 }
-
-.phone-icon:hover {
-  transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-}
+.phone-icon:hover { transform: scale(1.1) rotate(-2deg); box-shadow: 0 5px 18px rgba(0,0,0,0.12); }
 
 .icon {
-  width: 55px;
-  height: 55px;
+  width: 55px; height: 55px;
   background: linear-gradient(135deg, #2A65A3, #3B7BB8);
   border-radius: 15px;
   display: flex;
@@ -126,46 +80,19 @@ body {
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   animation: float 3s ease-in-out infinite;
 }
+.icon-label { font-size: 13px; font-weight: 600; color: #A5E0FF; }
 
-.icon-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #A5E0FF;
-}
+@keyframes popIn { 0%{transform:translateY(50px) scale(0);opacity:0;} 60%{transform:translateY(-8px) scale(1.15);opacity:1;} 100%{transform:translateY(0) scale(1);opacity:1;} }
+@keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);} }
 
-/* Animations */
-@keyframes popIn {
-  0% { transform: translateY(50px) scale(0); opacity: 0; }
-  60% { transform: translateY(-8px) scale(1.15); opacity: 1; }
-  100% { transform: translateY(0) scale(1); opacity: 1; }
-}
+/* Flex container for phone + info */
+.flex-container { display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-}
+/* Arduino Info Box */
+.arduino-info { flex: 1; min-width: 300px; }
+.info-title { font-size: 24px; margin-bottom: 15px; color: #0A3D62; }
 
-/* ARDUINO INFO NEXT TO PHONE FRAME */
-.flex-container {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-/* Info Box */
-.arduino-info {
-  flex: 1;
-  min-width: 250px;
-}
-
-.info-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #0A3D62;
-}
-
-/* Circle image + description container */
+/* Info box horizontal with image + text */
 .info-box {
   display: flex;
   align-items: center;
@@ -190,11 +117,11 @@ body {
   border: 3px solid #00A896;
   transition: transform 0.3s;
 }
+.info-box:hover .info-image img { transform: scale(1.1); }
 
-.info-box:hover .info-image img {
-  transform: scale(1.1);
+.info-text {
+  flex: 1;
 }
-
 .info-text p {
   margin: 0;
   font-size: 1rem;
@@ -204,34 +131,9 @@ body {
   padding-left: 15px;
   transition: border-color 0.3s;
 }
+.info-box:hover .info-text p { border-color: #007B66; }
 
-.info-box:hover .info-text p {
-  border-color: #007B66;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .arduino-info {
-    margin-top: 20px;
-  }
-
-  .info-text p {
-    border-left: none;
-    padding-left: 0;
-  }
-
-  .info-image img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* FOOTER */
+/* Footer */
 footer {
   background: #0A3D62;
   padding: 40px 50px;
@@ -240,46 +142,26 @@ footer {
   flex-wrap: wrap;
   color: white;
 }
+.footer-section { flex: 1; min-width: 220px; margin: 10px; }
+.footer-section h3 { color: #00A896; margin-bottom: 10px; font-size: 16px; }
+.footer-section p, .footer-section ul { color: #D0F4F4; }
+.footer-section ul { list-style: none; padding: 0; }
+.footer-section ul li { margin: 6px 0; }
+.footer-bottom { text-align: center; padding: 15px; background-color: #074074; color: #D0F4F4; font-size: 14px; }
 
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-  margin: 10px;
-}
-
-.footer-section h3 {
-  color: #00A896;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.footer-section p,
-.footer-section ul {
-  color: #D0F4F4;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 6px 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 15px;
-  background-color: #074074;
-  color: #D0F4F4;
-  font-size: 14px;
+/* Responsive */
+@media (max-width: 768px) {
+  .flex-container { flex-direction: column; align-items: center; }
+  .info-box { flex-direction: column; text-align: center; }
+  .info-text p { border-left: none; padding-left: 0; }
+  .info-image img { width: 100px; height: 100px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BANNER -->
+<!-- Top Banner -->
 <div class="top-bar">
   <div class="logo">Arduino Hub</div>
   <nav class="navbar"> 
@@ -292,18 +174,18 @@ footer {
   </nav>
 </div>
 
-<!-- MAIN BANNER -->
+<!-- Main Banner -->
 <section class="main-banner">
   <h1>Arduino Learning Hub</h1>
 </section>
 
-<!-- CONTENT -->
+<!-- Content Section -->
 <section class="content-section">
   <div class="left-panel">
     <h1 class="left-title">Arduino Basics</h1>
 
     <div class="flex-container">
-      <!-- PHONE FRAME -->
+      <!-- Phone Frame -->
       <div class="phone-frame">
         <div class="icon-grid">
           <a href="board-overview.html" class="phone-icon" style="--i:1;">
@@ -329,7 +211,7 @@ footer {
         </div>
       </div>
 
-      <!-- ARDUINO INFO -->
+      <!-- Arduino Info -->
       <div class="arduino-info">
         <h2 class="info-title">What is Arduino?</h2>
         <div class="info-box">
@@ -337,20 +219,16 @@ footer {
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Board">
           </div>
           <div class="info-text">
-            <p>Arduino is an open-source electronics platform that allows people to create interactive projects by combining hardware and software. The hardware consists of a small programmable board with a microcontroller, which can read inputs from sensors (like light, temperature, or motion) and control outputs such as LEDs, motors, or speakers. The software, called the Arduino IDE, lets users write and upload code to the board using a simplified version of C/C++. Arduino is widely used for learning electronics, building prototypes, and creating projects ranging from blinking LEDs and robots to home automation systems and artistic installations. Essentially, it gives everyday objects a “brain” so they can sense and respond to their environment.</p>
+            <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. It allows you to create interactive projects by connecting sensors, motors, LEDs, and more, all programmable with simple code.</p>
           </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-
-  <div class="right-panel">
-    <!-- Optional right-side content -->
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
   <div class="footer-section">
     <h3>About Arduino Hub</h3>
@@ -375,4 +253,3 @@ footer {
 
 </body>
 </html>
-
