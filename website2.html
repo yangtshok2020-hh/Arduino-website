@@ -203,10 +203,90 @@ footer {
   color: #D0F4F4;
   font-size: 14px;
 }
+
+.arduino-info {
+  margin-top: 30px;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  color: #0A3D62;
+  margin-bottom: 20px;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #f9fafc;
+}
+
+.info-box:hover {
+  border-color: #00A896;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Circular Image */
+.info-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00A896;
+  transition: transform 0.3s;
+}
+
+.info-box:hover .info-image img {
+  transform: scale(1.1);
+}
+
+/* Description Text */
+.info-text p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  border-left: 3px solid #00A896;
+  padding-left: 15px;
+  transition: border-color 0.3s;
+}
+
+.info-box:hover .info-text p {
+  border-color: #007B66;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-text p {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  
+  .info-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
 </style>
 </head>
 
-<body>
+
+  
+  
+  <body>
 
 <!-- TOP BANNER -->
 <!-- 🔹 Top Thin Banner -->
@@ -234,10 +314,6 @@ footer {
 
     <div class="phone-frame">
       <div class="icon-grid">
-        <a href="what-is-arduino.html" class="phone-icon" style="--i:0;">
-          <div class="icon">⚡</div>
-          <div class="icon-label">What Is Arduino?</div>
-        </a>
         <a href="board-overview.html" class="phone-icon" style="--i:1;">
           <div class="icon">💡</div>
           <div class="icon-label">Board Overview</div>
@@ -267,6 +343,18 @@ footer {
   </div>
 </section>
 
+<div class="arduino-info">
+  <h2 class="info-title">What is Arduino?</h2>
+  <div class="info-box">
+    <div class="info-image">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Board">
+    </div>
+    <div class="info-text">
+      <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. It allows you to create interactive projects by connecting sensors, motors, LEDs, and more, all programmable with simple code.</p>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-section">
@@ -292,6 +380,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
