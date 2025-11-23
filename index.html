@@ -167,90 +167,59 @@ footer {
   font-size: 14px;
 }
 
-.featured-section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
 
-    .featured-section h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #0A3D62;
-    }
+.project-card {
+  background: linear-gradient(145deg, #f0f4f8, #e0e7ef);
+  border-radius: 16px;
+  width: 280px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
 
-    .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
 
-    .project-card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      width: 280px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+.project-content h3 {
+  font-size: 1.3rem;
+  color: #0A3D62;
+  margin-bottom: 10px;
+}
 
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+.project-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
 
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+.project-btn {
+  background-color: #00A896;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .project-content {
-      padding: 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-content h3 {
-      margin: 0 0 10px 0;
-      font-size: 1.2rem;
-      color: #0A3D62;
-    }
-
-    .project-content p {
-      flex: 1;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-      color: #555;
-    }
-
-    .project-btn {
-      background-color: #00A896;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .project-btn:hover {
-      background-color: #007B66;
-    }
-
-    @media (max-width: 900px) {
-      .projects-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+.project-btn:hover {
+  background-color: #007B66;
+}
 </style>
 </head>
 
@@ -341,39 +310,37 @@ footer {
 
 
   
-<section class="featured-section">
-    <h2>🔥 Featured Projects</h2>
-    <div class="projects-container">
 
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1583336669168-4bb2d5220a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blink LED">
-        <div class="project-content">
-          <h3>🔴 Blink LED</h3>
-          <p>Learn to blink an LED using Arduino in just a few steps.</p>
-          <a href="#" class="project-btn">Try Now</a>
-        </div>
+ <section class="featured-section">
+  <h2>🔥 Featured Projects</h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>🔴 Blink LED</h3>
+        <p>Learn to blink an LED using Arduino in just a few steps.</p>
+        <a href="#" class="project-btn">Try Now</a>
       </div>
-
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1598300051675-59b79af4f3e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traffic Light">
-        <div class="project-content">
-          <h3>🚦 Traffic Light</h3>
-          <p>Control a traffic light sequence and understand timing with Arduino.</p>
-          <a href="#" class="project-btn">Try Now</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1598077712784-4c07b1f810d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servo Motor Control">
-        <div class="project-content">
-          <h3>⚙️ Servo Motor Control</h3>
-          <p>Control servo motor angles and create dynamic motion projects.</p>
-          <a href="#" class="project-btn">Try Now</a>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>🚦 Traffic Light</h3>
+        <p>Control a traffic light sequence and understand timing with Arduino.</p>
+        <a href="#" class="project-btn">Try Now</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>⚙️ Servo Motor Control</h3>
+        <p>Control servo motor angles and create dynamic motion projects.</p>
+        <a href="#" class="project-btn">Try Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
   
 <!-- 🔹 Footer -->
 <footer>
@@ -406,6 +373,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
