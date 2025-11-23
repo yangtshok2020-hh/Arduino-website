@@ -7,47 +7,72 @@
 
 <style>
 /* --------- BASE --------- */
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F4F4F4; /* light neutral background */
+  font-family: "Poppins", sans-serif;
+  background: #f9fafc;
   color: #333;
 }
 
-/* --------- TOP BANNER --------- */
-.top-banner {
-  background: #0A3D62; /* dark blue Arduino theme */
+/* 🔹 Thin Top Banner (Logo + Navbar) */
+.top-bar {
+  background-color: #0A3D62; /* Dark Arduino Blue */
   color: white;
-  padding: 15px 40px;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 0 40px;
 }
 
-.logo {
+.top-bar .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
-.navbar {
+.top-bar .navbar {
   display: flex;
   gap: 20px;
 }
 
-.navbar a {
-  color: #fff;
+.top-bar .navbar a {
+  color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.navbar a:hover {
-  color: #00A896; /* bright cyan accent for hover */
+.top-bar .navbar a:hover {
+  color: #00A896;
 }
 
+/* 🔹 Main Banner (Image + Title + Subtitle) */
+.main-banner {
+  background: url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.main-banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.main-banner p {
+  margin-top: 10px;
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.5;
+  color: #D0F4F4;
+}
 /* --------- CONTENT SECTION --------- */
 .content-section {
   display: flex;
@@ -261,3 +286,4 @@ footer {
 
 </body>
 </html>
+
