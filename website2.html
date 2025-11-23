@@ -150,6 +150,50 @@ footer {
   .info-text p { border-left: none; padding-left: 0; }
   .info-image img { width: 100px; height: 100px; }
 }
+
+/* Component Cards */
+.component-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.component-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9fafc;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px;
+  flex: 0 0 120px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.component-item:hover {
+  border-color: #00A896;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.component-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border: 2px solid #00A896;
+  transition: transform 0.3s;
+}
+
+.component-item:hover img {
+  transform: scale(1.1);
+}
+
+.component-item p {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 0;
+}
 </style>
 </head>
 <body>
@@ -214,6 +258,55 @@ footer {
   </div>
 </section>
 
+
+<section class="content-section">
+  <div class="left-panel">
+    <h1 class="left-title">Board Overview</h1>
+
+    <div class="flex-container">
+      <!-- Main Arduino Board Image -->
+      <div class="info-box" style="flex-direction: column; align-items: center;">
+        <div class="info-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Board" style="width: 180px; height: 180px;">
+        </div>
+        <h2 class="info-title" style="margin-top: 15px;">Arduino Uno</h2>
+      </div>
+
+      <!-- Board Components -->
+      <div class="arduino-info" style="flex:1;">
+        <div class="component-box">
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/USB_port_Arduino_Uno.jpg/120px-USB_port_Arduino_Uno.jpg" alt="USB Port">
+            <p><strong>USB Port</strong> – for uploading code.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Arduino_Power_Jack.jpg/120px-Arduino_Power_Jack.jpg" alt="Power Jack">
+            <p><strong>Power Jack</strong> – for external power.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Arduino_digital_pins.jpg/120px-Arduino_digital_pins.jpg" alt="Digital Pins">
+            <p><strong>Digital Pins</strong> – for sensors & LEDs.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Arduino_Analog_pins.jpg/120px-Arduino_Analog_pins.jpg" alt="Analog Pins">
+            <p><strong>Analog Pins</strong> – for measuring values.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arduino_Reset_Button.jpg/120px-Arduino_Reset_Button.jpg" alt="Reset Button">
+            <p><strong>Reset Button</strong> – restarts the board.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Arduino_Microcontroller.jpg/120px-Arduino_Microcontroller.jpg" alt="Microcontroller">
+            <p><strong>Microcontroller</strong> – the “brain.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
 <footer>
   <div class="footer-section">
     <h3>About Arduino Hub</h3>
@@ -237,4 +330,5 @@ footer {
 
 </body>
 </html>
+
 
