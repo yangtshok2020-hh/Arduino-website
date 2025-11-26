@@ -186,6 +186,83 @@ footer {
   .flex-container { flex-direction: column; align-items: center; }
   .info-box { flex-direction: column; text-align: center; }
 }
+
+/* Section Title */
+.component-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2d5f73;
+}
+
+/* Main Container (same border as before) */
+.component-container {
+  display: flex;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  background: #ffffffc0;
+  border-radius: 20px;
+  border: 2px solid #b8e7ff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Left Image Box */
+.component-image-box img {
+  width: 260px;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid #a4d8ff;
+}
+
+/* Right Details List */
+.component-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Each Item */
+.component-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #e9f7ff;
+  padding: 10px 15px;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+  border: 1px solid #b8eaff;
+}
+
+.component-item:hover {
+  transform: scale(1.03);
+}
+
+/* Item Icons */
+.component-item img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid #a4d8ff;
+  object-fit: cover;
+}
+
+/* Item Text */
+.component-item p {
+  margin: 0;
+  color: #2c4a55;
+  font-size: 15px;
+}
+
 </style>
 </head>
 
@@ -300,6 +377,52 @@ footer {
   </div>
 </section>
 
+<section class="component-section">
+  <h2 class="component-title">3. Required Components</h2>
+
+  <div class="component-container">
+    <!-- Left side: Image -->
+    <div class="component-image-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" 
+           alt="Arduino Uno">
+    </div>
+
+    <!-- Right side: Details -->
+    <div class="component-details">
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/FTDI_USB_to_Serial_Adapter.jpg">
+        <p><b>Arduino Uno</b> – Main board for all beginner projects.</p>
+      </div>
+
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/USB_Type_A_Plug.jpg">
+        <p><b>USB Cable</b> – Used to upload code and power the board.</p>
+      </div>
+
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Breadboard_full.jpg">
+        <p><b>Breadboard</b> – For building circuits without soldering.</p>
+      </div>
+
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Jumper_wires.jpg">
+        <p><b>Jumper Wires</b> – Connect components together.</p>
+      </div>
+
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/LED_RGB.jpg">
+        <p><b>LEDs</b> – For lights, signals, and basic output.</p>
+      </div>
+
+      <div class="component-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Resistors.jpg">
+        <p><b>Resistors</b> – Prevent components from burning out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-section">
@@ -325,6 +448,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
