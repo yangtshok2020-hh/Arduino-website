@@ -188,79 +188,70 @@ footer {
 }
 
 /* Section Title */
-.component-title {
+.section-title {
   text-align: center;
   font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
   font-weight: 700;
-  margin-bottom: 25px;
-  color: #2d5f73;
 }
 
-/* Main Container (same border as before) */
-.component-container {
-  display: flex;
-  gap: 25px;
-  max-width: 900px;
+/* Border Container */
+.components-border {
+  width: 95%;
   margin: auto;
+  border: 2px solid #e3e3e3;
   padding: 25px;
-  background: #ffffffc0;
   border-radius: 20px;
-  border: 2px solid #b8e7ff;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffffd9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.component-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Left Image Box */
-.component-image-box img {
-  width: 260px;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid #a4d8ff;
-}
-
-/* Right Details List */
-.component-details {
+/* Row for Horizontal Layout */
+.components-row {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-/* Each Item */
-.component-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: #e9f7ff;
-  padding: 10px 15px;
-  border-radius: 14px;
-  transition: transform 0.3s ease;
-  border: 1px solid #b8eaff;
+/* Component Card */
+.component-card {
+  background: #f9f9ff;
+  padding: 15px;
+  border-radius: 15px;
+  width: 160px;
+  min-width: 160px;
+  text-align: center;
+  transition: 0.3s;
+  border: 2px solid #e6e6ff;
 }
 
-.component-item:hover {
-  transform: scale(1.03);
+.component-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* Item Icons */
-.component-item img {
-  width: 55px;
-  height: 55px;
+/* Component Image */
+.component-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
   border-radius: 10px;
-  border: 2px solid #a4d8ff;
-  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-/* Item Text */
-.component-item p {
-  margin: 0;
-  color: #2c4a55;
-  font-size: 15px;
+/* Component Text */
+.component-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.component-card p {
+  font-size: 14px;
+  color: #555;
 }
 
 </style>
@@ -377,50 +368,59 @@ footer {
   </div>
 </section>
 
-<section class="component-section">
-  <h2 class="component-title">3. Required Components</h2>
 
-  <div class="component-container">
-    <!-- Left side: Image -->
-    <div class="component-image-box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" 
-           alt="Arduino Uno">
-    </div>
+<section class="components-section">
+  <h2 class="section-title">Required Components</h2>
 
-    <!-- Right side: Details -->
-    <div class="component-details">
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/FTDI_USB_to_Serial_Adapter.jpg">
-        <p><b>Arduino Uno</b> – Main board for all beginner projects.</p>
+  <div class="components-border">
+    <div class="components-row">
+
+      <!-- Arduino Uno -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
+        <h3>Arduino Uno</h3>
+        <p>Main board for all projects.</p>
       </div>
 
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/USB_Type_A_Plug.jpg">
-        <p><b>USB Cable</b> – Used to upload code and power the board.</p>
+      <!-- USB Cable -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/USB_A_to_B_cable.jpg" alt="USB Cable">
+        <h3>USB Cable</h3>
+        <p>Used to upload code.</p>
       </div>
 
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Breadboard_full.jpg">
-        <p><b>Breadboard</b> – For building circuits without soldering.</p>
+      <!-- Breadboard -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Breadboard.jpg" alt="Breadboard">
+        <h3>Breadboard</h3>
+        <p>No-solder testing board.</p>
       </div>
 
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Jumper_wires.jpg">
-        <p><b>Jumper Wires</b> – Connect components together.</p>
+      <!-- Jumper Wires -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jumper_wires.jpg" alt="Jumper Wires">
+        <h3>Jumper Wires</h3>
+        <p>Connect components.</p>
       </div>
 
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/LED_RGB.jpg">
-        <p><b>LEDs</b> – For lights, signals, and basic output.</p>
+      <!-- LEDs -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LEDs.jpg" alt="LEDs">
+        <h3>LEDs</h3>
+        <p>Light indicators.</p>
       </div>
 
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Resistors.jpg">
-        <p><b>Resistors</b> – Prevent components from burning out.</p>
+      <!-- Resistors -->
+      <div class="component-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Resistors.jpg" alt="Resistors">
+        <h3>Resistors</h3>
+        <p>Control current flow.</p>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 <!-- FOOTER -->
@@ -448,6 +448,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
