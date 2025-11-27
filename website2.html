@@ -535,6 +535,50 @@ footer {
   </div>
 </section>
 
+<!-- First Program: Blink Section -->
+<section class="content-section">
+  <div class="arduino-info">
+    <h2 class="info-title">Your First Program: Blink</h2>
+
+    <div class="info-box" style="flex-direction: column; align-items: flex-start;">
+      <!-- Explanation -->
+      <div class="info-text" style="margin-bottom: 20px;">
+        <p><strong>What Blink does:</strong> Makes an LED blink on your Arduino board at a set interval.</p>
+      </div>
+
+      <!-- Code Example -->
+      <div class="info-text" style="margin-bottom: 20px;">
+        <p><strong>Code Example:</strong></p>
+        <pre style="background: #f0f0f0; padding: 15px; border-radius: 10px; font-family: monospace; overflow-x: auto;">
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT); // Set the built-in LED pin as output
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); // Turn LED on
+  delay(1000);                     // Wait 1 second
+  digitalWrite(LED_BUILTIN, LOW);  // Turn LED off
+  delay(1000);                     // Wait 1 second
+}
+        </pre>
+      </div>
+
+      <!-- Line-by-line Explanation -->
+      <div class="info-text">
+        <p><strong>Explanation of each line:</strong></p>
+        <ul style="margin-left: 20px;">
+          <li><strong>void setup():</strong> Runs once to initialize settings.</li>
+          <li><strong>pinMode(LED_BUILTIN, OUTPUT):</strong> Sets the LED pin as output.</li>
+          <li><strong>void loop():</strong> Runs repeatedly after setup.</li>
+          <li><strong>digitalWrite(LED_BUILTIN, HIGH):</strong> Turns the LED on.</li>
+          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
+          <li><strong>digitalWrite(LED_BUILTIN, LOW):</strong> Turns the LED off.</li>
+          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
   
 
@@ -563,6 +607,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
