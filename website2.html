@@ -383,6 +383,13 @@ footer {
   }
 }
 
+.topic-container {
+  position: sticky;
+  top: 20px;   /* distance from top while scrolling */
+  z-index: 10;
+}
+
+
 
 
 
@@ -418,28 +425,30 @@ footer {
   <div class="flex-container">
 
     <!-- PHONE MENU -->
-    <div class="phone-frame">
-      <div class="icon-grid">
-        <a class="phone-icon" style="--i:1;">
-          <div class="icon">💡</div>
-          <div class="icon-label">Board Overview</div>
-        </a>
-        <a class="phone-icon" style="--i:2;">
-          <div class="icon">🔧</div>
-          <div class="icon-label">Components</div>
-        </a>
-        <a class="phone-icon" style="--i:3;">
-          <div class="icon">💻</div>
-          <div class="icon-label">Install IDE</div>
-        </a>
-        <a class="phone-icon" style="--i:4;">
-          <div class="icon">🖥️</div>
-          <div class="icon-label">First Program</div>
-        </a>
-        <a class="phone-icon" style="--i:5;">
-          <div class="icon">🔄</div>
-          <div class="icon-label">Setup & Loop</div>
-        </a>
+    <div class="topic-container">
+      <div class="phone-frame">
+        <div class="icon-grid">
+          <a class="phone-icon" style="--i:1;">
+            <div class="icon">💡</div>
+            <div class="icon-label">Board Overview</div>
+          </a>
+          <a class="phone-icon" style="--i:2;">
+            <div class="icon">🔧</div>
+            <div class="icon-label">Components</div>
+          </a>
+          <a class="phone-icon" style="--i:3;">
+            <div class="icon">💻</div>
+            <div class="icon-label">Install IDE</div>
+          </a>
+          <a class="phone-icon" style="--i:4;">
+            <div class="icon">🖥️</div>
+            <div class="icon-label">First Program</div>
+          </a>
+          <a class="phone-icon" style="--i:5;">
+            <div class="icon">🔄</div>
+            <div class="icon-label">Setup & Loop</div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -738,6 +747,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
