@@ -167,19 +167,34 @@ body {
 
 /* Footer */
 footer {
-  background: #0A3D62;
-  padding: 40px;
+  background-color: #0A3D62;
   color: white;
+  padding: 40px 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.footer-section { width: 250px; }
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  color: #00A896;
+  border-bottom: 2px solid #00A896;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
 .footer-bottom {
-  background: #06385D;
-  padding: 15px;
   text-align: center;
-  color: #cdefff;
+  background-color: #072B45;
+  color: #D0F4F4;
+  padding: 15px;
+  font-size: 14px;
 }
 
 /* Responsive */
@@ -611,6 +626,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
