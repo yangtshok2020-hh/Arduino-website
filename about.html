@@ -149,7 +149,44 @@ footer {
      padding: 15px;
      font-size: 14px;
    }
-    
+
+ .container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #4CAF50;  /* border color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    gap: 20px;
+    max-width: 800px;
+  }
+
+  .container img {
+    width: 250px;   /* change size as needed */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+  }
+
+  .container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container img {
+      width: 80%;
+    }
+  }
 
 
   </style>
@@ -179,6 +216,16 @@ footer {
   <h1>Welcome to the Arduino Learning Hub</h1>
   <p>Learn Arduino step by step with simple projects, guides, and code. Learn Arduino step by step with simple projects, guides, and code.</p>
 </section>
+
+
+<div class="container">
+  <img src="https://drive.google.com/file/d/1zEwPH_c3YxfMSNX84IP22N5ie-ZCu1uz/view?usp=sharing" alt="Me">
+  <p>
+    This is a paragraph where you can write anything you like. You can talk about yourself, your hobbies, or whatever you want to showcase beside your image. The container has a border, shadow, and rounded corners for a neat design.
+  </p>
+</div>
+
+  
 
 <!-- 🔹 Footer -->
 <footer>
@@ -220,3 +267,4 @@ footer {
 
 </body>
 </html>
+
