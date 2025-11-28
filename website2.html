@@ -385,8 +385,14 @@ footer {
 
 .topic-container {
   position: sticky;
-  top: 100px;    /* distance from top while scrolling */
-  margin-left: 20px;
+  top: 120px;       /* adjust how high it stays when stuck */
+  height: fit-content;
+}
+
+/* Make sure the layout supports side-by-side structure */
+.main-layout {
+  display: flex;
+  gap: 20px;
 }
 
 
@@ -425,29 +431,31 @@ footer {
   <div class="flex-container">
 
     <!-- PHONE MENU -->
-    <div class="topic-container">
-      <div class="phone-frame">
-        <div class="icon-grid">
-          <a class="phone-icon" style="--i:1;">
-            <div class="icon">💡</div>
-            <div class="icon-label">Board Overview</div>
-          </a>
-          <a class="phone-icon" style="--i:2;">
-            <div class="icon">🔧</div>
-            <div class="icon-label">Components</div>
-          </a>
-          <a class="phone-icon" style="--i:3;">
-            <div class="icon">💻</div>
-            <div class="icon-label">Install IDE</div>
-          </a>
-          <a class="phone-icon" style="--i:4;">
-            <div class="icon">🖥️</div>
-            <div class="icon-label">First Program</div>
-          </a>
-          <a class="phone-icon" style="--i:5;">
-            <div class="icon">🔄</div>
-            <div class="icon-label">Setup & Loop</div>
-          </a>
+    <div class="main-layout">
+      <div class="topic-container">
+        <div class="phone-frame">
+          <div class="icon-grid">
+            <a class="phone-icon" style="--i:1;">
+              <div class="icon">💡</div>
+              <div class="icon-label">Board Overview</div>
+            </a>
+            <a class="phone-icon" style="--i:2;">
+              <div class="icon">🔧</div>
+              <div class="icon-label">Components</div>
+            </a>
+            <a class="phone-icon" style="--i:3;">
+              <div class="icon">💻</div>
+              <div class="icon-label">Install IDE</div>
+            </a>
+            <a class="phone-icon" style="--i:4;">
+              <div class="icon">🖥️</div>
+              <div class="icon-label">First Program</div>
+            </a>
+            <a class="phone-icon" style="--i:5;">
+              <div class="icon">🔄</div>
+              <div class="icon-label">Setup & Loop</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -747,6 +755,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
