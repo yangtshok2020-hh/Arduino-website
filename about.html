@@ -150,43 +150,49 @@ footer {
      font-size: 14px;
    }
 
- .container {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid #4CAF50;  /* border color */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 20px;
-    gap: 20px;
-    max-width: 800px;
+/* 🔹 Container for each section */
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  gap: 30px;              /* ⬅ more space between image & text */
+  max-width: 900px;       /* ⬅ larger container */
+  margin: 40px auto;      /* ⬅ MORE SPACE BETWEEN TWO BOXES */
+}
+
+/* 🔹 Bigger Images */
+.container img {
+  width: 320px;           /* ⬅ bigger image */
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #4CAF50;
+}
+
+/* 🔹 Text Style */
+.container p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 🔹 Responsive (mobile) */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
   }
 
   .container img {
-    width: 250px;   /* change size as needed */
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #4CAF50;
+    width: 90%;          /* responsive */
   }
+}
 
-  .container p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-  }
 
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .container img {
-      width: 80%;
-    }
-  }
 
 
   </style>
@@ -273,6 +279,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
