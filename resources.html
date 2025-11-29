@@ -45,8 +45,7 @@
     color: #00A896;
   }
 
-  /* ===== Main Banner ===== */
- .main-banner {
+.main-banner {
   background: white;
   height: 350px;
   display: flex;
@@ -72,41 +71,35 @@
   color:  #0D1B2A;
   animation: slideUp 1.2s ease-out;
 }
-  }
 
-  /* ===== Container for Sections ===== */
-  .container {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid #4CAF50;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 20px;
-    gap: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+/* ----- Container ----- */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 900px;
+  margin: 50px auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.3s;
+}
+.container img {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #00A896;
+  animation: popIn 0.8s ease-out;
+}
+.container p {
+  font-size: 18px;
+  line-height: 1.7;
+}
 
-  .container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  }
-
-  .container img {
-    width: 320px;
-    height: auto;
-    border-radius: 12px;
-    border: 2px solid #4CAF50;
-  }
-
-  .container p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.7;
-    margin: 0;
-  }
 
   @media (max-width: 600px) {
     .container {
@@ -336,6 +329,7 @@
 
 </body>
 </html>
+
 
 
 
