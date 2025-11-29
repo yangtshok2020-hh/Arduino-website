@@ -383,10 +383,12 @@ footer {
   }
 }
 
+/* Topic container: sticky + smooth scroll */
 .topic-container {
-  position: sticky;
-  top: 120px;       /* adjust how high it stays when stuck */
+  position: sticky;       /* Sticks relative to parent */
+  top: 120px;             /* Distance from top */
   height: fit-content;
+  transition: transform 0.2s ease-out; /* smooth movement if using JS */
 }
 
 /* Make sure the layout supports side-by-side structure */
@@ -749,6 +751,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
