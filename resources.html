@@ -46,30 +46,32 @@
   }
 
   /* ===== Main Banner ===== */
-  .main-banner {
-    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-    color: white;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
-
-  .main-banner h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    font-weight: bold;
-  }
-
-  .main-banner p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    max-width: 800px;
-    line-height: 1.5;
-    color: #333; /* Darker subtitle color */
+ .main-banner {
+  background: white;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.main-banner h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+  animation: slideDown 1.2s ease-out;
+}
+.main-banner p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  line-height: 1.5;
+  margin-top: 10px;
+  color:  #0D1B2A;
+  animation: slideUp 1.2s ease-out;
+}
   }
 
   /* ===== Container for Sections ===== */
@@ -353,3 +355,4 @@
 
 </body>
 </html>
+
