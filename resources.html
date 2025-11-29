@@ -261,6 +261,44 @@
 
 <!-- About Me Section -->
 
+<!-- Traffic Light Section -->
+<div class="traffic-section">
+  <h2>Traffic Light Simulator</h2>
+
+  <!-- Display Arduino Code -->
+  <div class="arduino-code" style="max-width: 700px; margin: 0 auto 30px auto; background: #f0f0f0; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <pre style="margin: 0; overflow-x: auto; font-family: 'Courier New', monospace;">
+<code>
+// Arduino Traffic Light Example
+int redPin = 8;
+int yellowPin = 9;
+int greenPin = 10;
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(yellowPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(redPin, HIGH);
+  delay(5000); // Red for 5 seconds
+  digitalWrite(redPin, LOW);
+
+  digitalWrite(greenPin, HIGH);
+  delay(5000); // Green for 5 seconds
+  digitalWrite(greenPin, LOW);
+
+  digitalWrite(yellowPin, HIGH);
+  delay(2000); // Yellow for 2 seconds
+  digitalWrite(yellowPin, LOW);
+}
+</code>
+    </pre>
+  </div>
+
+  <!-- Traffic Light Simulator -->
+  
 
 <!-- Traffic Light Section -->
 <div class="traffic-section">
@@ -329,6 +367,7 @@
 
 </body>
 </html>
+
 
 
 
