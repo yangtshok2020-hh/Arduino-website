@@ -49,18 +49,22 @@ body {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  flex-wrap: wrap;
+  position: relative;
 }
 
-/* Phone Menu */
+/* Sticky Sidebar */
 .phone-frame {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: #1A4F8B;
+  padding: 15px;
   border-radius: 15px;
-  padding: 10px;
   width: 130px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
-.icon-grid { display: flex; flex-direction: column; gap: 12px; }
 
 .phone-icon {
   display: flex;
@@ -71,6 +75,7 @@ body {
   animation: popIn 0.6s forwards;
   animation-delay: calc(var(--i) * 0.12s);
   transition: 0.3s ease;
+  cursor: pointer;
 }
 .phone-icon:hover { transform: scale(1.1) rotate(-2deg); }
 
@@ -166,81 +171,48 @@ body {
 
 /* Footer */
 footer {
-     background-color: #0A3D62; /* Dark Blue */
-     color: white;
-     padding: 40px 0;
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-   }
-
-
-   .footer-section {
-     flex: 1;
-     min-width: 220px;
-     margin: 10px;
-     padding: 10px;
-   }
-
-
-   .footer-section h3 {
-     color: #00A896; /* Arduino Accent */
-     border-bottom: 2px solid #00A896;
-     padding-bottom: 5px;
-     margin-bottom: 15px;
-   }
-
-
-   .footer-section ul {
-     list-style: none;
-     padding: 0;
-   }
-
-
-   .footer-section ul li {
-     margin: 8px 0;
-   }
-
-
-   .footer-section ul li a {
-     color: #FFFFFF;
-     text-decoration: none;
-     transition: color 0.3s;
-   }
-
-
-   .footer-section ul li a:hover {
-     color: #00A896; /* Bright Cyan on Hover */
-   }
-
-
-   .social-icons {
-     display: flex;
-     gap: 10px;
-     margin-top: 10px;
-   }
-
-
-   .social-icons a {
-     color: white;
-     font-size: 20px;
-     text-decoration: none;
-     transition: color 0.3s ease;
-   }
-
-
-   .social-icons a:hover {
-     color: #00A896;
-   }
-
-
-   .footer-bottom {
-     text-align: center;
-     background-color: #072B45;
-     color: #D0F4F4;
-     padding: 15px;
-     font-size: 14px;
-   }
+  background-color: #0A3D62;
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+  padding: 10px;
+}
+.footer-section h3 {
+  color: #00A896;
+  border-bottom: 2px solid #00A896;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 8px 0;
+}
+.footer-section ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section ul li a:hover { color: #00A896; }
+.social-icons { display: flex; gap: 10px; margin-top: 10px; }
+.social-icons a { color: white; font-size: 20px; text-decoration: none; transition: color 0.3s ease; }
+.social-icons a:hover { color: #00A896; }
+.footer-bottom {
+  text-align: center;
+  background-color: #072B45;
+  color: #D0F4F4;
+  padding: 15px;
+  font-size: 14px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -248,167 +220,24 @@ footer {
   .info-box { flex-direction: column; text-align: center; }
 }
 
-/* Section Title */
-.section-title {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: 700;
-}
-
-/* Border Container */
-.components-border {
-  width: 80%;
-  margin-left: 250px; 
-  border: 2px solid #e3e3e3;
-  padding: 25px;
-  border-radius: 20px;
-  background: #ffffffd9;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Row for Horizontal Layout */
-
-
-.components-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-/* Component Card */
-.component-card {
-  background: #f9f9ff;
-  padding: 15px;
-  border-radius: 15px;
-  width: 160px;
-  min-width: 160px;
-  text-align: center;
-  transition: 0.3s;
-  border: 2px solid #e6e6ff; 
-}
-
-
-
-.component-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-/* Component Image */
-.component-card img {
-  width: 100%;
-  height: 110px;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Component Text */
-.component-card h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.component-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* INSTALLATION SECTION */
-.install-section {
-  width: 75%;
-  margin-left: auto; /* pushes it to the right */
-  margin-top: 40px;
-  background: #ffffff;
-  border-radius: 20px;
-  border: 2px solid #d7e3ff;
-  padding: 30px 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  animation: fadeSlide 0.8s ease-out;
-}
-
-.install-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #4a6fff;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.install-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 18px;
-}
-
-.install-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  background: #f5f8ff;
-  padding: 18px 20px;
-  border-left: 6px solid #4a6fff;
+/* Highlight effect */
+.highlight {
+  border: 3px solid #00A896;
   border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 15px;
+  transition: border 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.install-step:hover {
-  transform: translateX(6px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
-
-.install-step img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-/* Smooth Fade + Slide Animation */
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Topic container: sticky + smooth scroll */
- .topic-container {
-      position: sticky;
-      top: 120px;
-      height: fit-content;
-      transition: transform 0.2s ease-out;
-    }
-
-/* Make sure the layout supports side-by-side structure */
-.main-layout {
-  display: flex;
-  gap: 20px;
-}
-
-
-
 </style>
 </head>
-
-
-
-
-  
 <body>
 
 <!-- TOP BAR -->
-
 <div class="top-bar">
   <div class="logo">Arduino Hub</div>
   <nav class="navbar"> 
@@ -426,31 +255,30 @@ footer {
 <!-- CONTENT -->
 <section class="content-section">
   <h1 class="left-title">Arduino Basics</h1>
-
-<div class="flex-container">
+  <div class="flex-container">
 
     <!-- PHONE MENU -->
     <div class="main-layout">
       <div class="topic-container">
         <div class="phone-frame">
           <div class="icon-grid">
-            <a class="phone-icon" style="--i:1;">
+            <a class="phone-icon" style="--i:1;" href="#board-overview">
               <div class="icon">💡</div>
               <div class="icon-label">Board Overview</div>
             </a>
-            <a class="phone-icon" style="--i:2;">
+            <a class="phone-icon" style="--i:2;" href="#components">
               <div class="icon">🔧</div>
               <div class="icon-label">Components</div>
             </a>
-            <a class="phone-icon" style="--i:3;">
+            <a class="phone-icon" style="--i:3;" href="#install-ide">
               <div class="icon">💻</div>
               <div class="icon-label">Install IDE</div>
             </a>
-            <a class="phone-icon" style="--i:4;">
+            <a class="phone-icon" style="--i:4;" href="#first-program">
               <div class="icon">🖥️</div>
               <div class="icon-label">First Program</div>
             </a>
-            <a class="phone-icon" style="--i:5;">
+            <a class="phone-icon" style="--i:5;" href="#setup-loop">
               <div class="icon">🔄</div>
               <div class="icon-label">Setup & Loop</div>
             </a>
@@ -460,10 +288,10 @@ footer {
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
-      <div class="arduino-info">
+    <div class="arduino-info">
 
       <!-- What is Arduino -->
-      <h2 class="info-title">What is Arduino?</h2>
+      <h2 id="what-is-arduino" class="info-title">What is Arduino?</h2>
       <div class="info-box">
         <div class="info-image">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
@@ -478,163 +306,117 @@ footer {
       </div>
 
       <!-- Board Overview -->
-      <h2 class="info-title">Board Overview</h2>
+      <h2 id="board-overview" class="info-title">Board Overview</h2>
       <div class="board-overview">
-
+        <!-- component items -->
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Arduino_usb_socket-1.jpg" alt="">
           <p><strong>USB Port</strong><br>Upload Code</p>
         </div>
-
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/DC_Barrel_Power_Jack_Connector_%28SMD%29_%2812311783276%29.jpg" alt="">
           <p><strong>Power Jack</strong><br>External Power</p>
         </div>
-
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/ArduinoDigitalPins.jpg" alt="">
           <p><strong>Digital Pins</strong><br>Sensors & LEDs</p>
         </div>
-
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_diecimila_pcb_top.jpg" alt="">
           <p><strong>Analog Pins</strong><br>Measure Values</p>
         </div>
-
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Arduino_push_button-1.jpg" alt="">
           <p><strong>Reset Button</strong><br>Restart Board</p>
         </div>
-
         <div class="component-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Noname_clone_of_Arduino_Uno_-_Mega328P_microcontroller.jpg" alt="">
           <p><strong>Microcontroller</strong><br>The Brain</p>
         </div>
-
       </div>
 
-    </div>
-
-  </div>
-</section>
-
-
-<section class="components-section">
-  <h2 class="section-title">Required Components</h2>
-
-  <div class="components-border">
-    <div class="components-row">
-
-      <!-- Arduino Uno -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
-        <h3>Arduino Uno</h3>
-        <p>Main board for all projects.</p>
-      </div>
-
-      <!-- USB Cable -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/USB_A_%26_B_cable.agr.jpg" alt="USB Cable">
-        <h3>USB Cable</h3>
-        <p>Used to upload code.</p>
-      </div>
-
-      <!-- Breadboard -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/400_points_breadboard.jpg" alt="Breadboard">
-        <h3>Breadboard</h3>
-        <p>No-solder testing board.</p>
-      </div>
-
-      <!-- Jumper Wires -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/A_few_Jumper_Wires.jpg" alt="Jumper Wires">
-        <h3>Jumper Wires</h3>
-        <p>Connect components.</p>
-      </div>
-
-      <!-- LEDs -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/5mm_LED_Light-emitting_diode_Red_1480277_8_9_HDR_Intensive.jpg" alt="LEDs">
-        <h3>LEDs</h3>
-        <p>Light indicators.</p>
-      </div>
-
-      <!-- Resistors -->
-      <div class="component-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/3_Resistors.jpg" alt="Resistors">
-        <h3>Resistors</h3>
-        <p>Control current flow.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<section class="install-section">
-  <h2 class="install-title">4. How to Install Arduino IDE</h2>
-
-  <div class="install-steps">
-
-    <!-- Step 1 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Arduino_IDE_logo.svg" alt="Download">
-      <div>
-        <h3>Where to Download</h3>
-        <p>Get the latest Arduino IDE from the official Arduino website.</p>
-      </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/U%2B1F863_WIDE-HEADED_DOWNWARDS_LIGHT_BARB_ARROW.svg" alt="Install">
-      <div>
-        <h3>How to Install</h3>
-        <p>Run the installer and follow the simple steps to install the IDE.</p>
-      </div>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Select_Board_Arduino_Uno.png" alt="Board Select">
-      <div>
-        <h3>Selecting the Board</h3>
-        <p>Go to <b>Tools → Board</b> and choose your Arduino model.</p>
-      </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SuccessfulIInstall.png" alt="COM Port">
-      <div>
-        <h3>Selecting the COM Port</h3>
-        <p>Go to <b>Tools → Port</b> and select the port your board is connected to.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- First Program: Blink Section -->
-<section class="content-section">
-  <div class="install-section">
-    <h2 class="info-title">Your First Program: Blink</h2>
-
-    <div class="info-box" style="flex-direction: column; align-items: flex-start;">
-      <!-- Explanation -->
-      <div class="info-image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/5mm_Cycling_RGB_LED.jpg" alt="Arduino Uno">
+      <!-- Required Components -->
+      <h2 id="components" class="section-title">Required Components</h2>
+      <div class="components-border">
+        <div class="components-row">
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
+            <h3>Arduino Uno</h3>
+            <p>Main board for all projects.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/USB_A_%26_B_cable.agr.jpg" alt="USB Cable">
+            <h3>USB Cable</h3>
+            <p>Used to upload code.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/400_points_breadboard.jpg" alt="Breadboard">
+            <h3>Breadboard</h3>
+            <p>No-solder testing board.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/A_few_Jumper_Wires.jpg" alt="Jumper Wires">
+            <h3>Jumper Wires</h3>
+            <p>Connect components.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/5mm_LED_Light-emitting_diode_Red_1480277_8_9_HDR_Intensive.jpg" alt="LEDs">
+            <h3>LEDs</h3>
+            <p>Light indicators.</p>
+          </div>
+          <div class="component-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/3_Resistors.jpg" alt="Resistors">
+            <h3>Resistors</h3>
+            <p>Control current flow.</p>
+          </div>
         </div>
-      <div class="info-text" style="margin-bottom: 20px;">
-        <p><strong>What Blink does:</strong> Makes an LED blink on your Arduino board at a set interval.</p>
       </div>
 
-      <!-- Code Example -->
-      <div class="info-text" style="margin-bottom: 20px;">
-        <p><strong>Code Example:</strong></p>
-        <pre style="background: #f0f0f0; padding: 15px; border-radius: 10px; font-family: monospace; overflow-x: auto;">
+      <!-- Install Arduino IDE -->
+      <h2 id="install-ide" class="info-title">4. How to Install Arduino IDE</h2>
+      <div class="install-steps">
+        <div class="install-step">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Arduino_IDE_logo.svg" alt="Download">
+          <div>
+            <h3>Where to Download</h3>
+            <p>Get the latest Arduino IDE from the official Arduino website.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/U%2B1F863_WIDE-HEADED_DOWNWARDS_LIGHT_BARB_ARROW.svg" alt="Install">
+          <div>
+            <h3>How to Install</h3>
+            <p>Run the installer and follow the simple steps to install the IDE.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Select_Board_Arduino_Uno.png" alt="Board Select">
+          <div>
+            <h3>Selecting the Board</h3>
+            <p>Go to <b>Tools → Board</b> and choose your Arduino model.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SuccessfulIInstall.png" alt="COM Port">
+          <div>
+            <h3>Selecting the COM Port</h3>
+            <p>Go to <b>Tools → Port</b> and select the port your board is connected to.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- First Program -->
+      <h2 id="first-program" class="info-title">Your First Program: Blink</h2>
+      <div class="info-box" style="flex-direction: column; align-items: flex-start;">
+        <div class="info-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/5mm_Cycling_RGB_LED.jpg" alt="LED">
+        </div>
+        <div class="info-text" style="margin-bottom: 20px;">
+          <p><strong>What Blink does:</strong> Makes an LED blink on your Arduino board at a set interval.</p>
+        </div>
+        <div class="info-text" style="margin-bottom: 20px;">
+          <p><strong>Code Example:</strong></p>
+          <pre style="background: #f0f0f0; padding: 15px; border-radius: 10px; font-family: monospace; overflow-x: auto;">
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT); // Set the built-in LED pin as output
 }
@@ -645,166 +427,78 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);  // Turn LED off
   delay(1000);                     // Wait 1 second
 }
-        </pre>
+          </pre>
+        </div>
+        <div class="info-text">
+          <p><strong>Explanation of each line:</strong></p>
+          <ul style="margin-left: 20px;">
+            <li><strong>void setup():</strong> Runs once to initialize settings.</li>
+            <li><strong>pinMode(LED_BUILTIN, OUTPUT):</strong> Sets the LED pin as output.</li>
+            <li><strong>void loop():</strong> Runs repeatedly after setup.</li>
+            <li><strong>digitalWrite(LED_BUILTIN, HIGH):</strong> Turns the LED on.</li>
+            <li><strong>delay(1000):</strong> Waits 1 second.</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Line-by-line Explanation -->
-      <div class="info-text">
-        <p><strong>Explanation of each line:</strong></p>
-        <ul style="margin-left: 20px;">
-          <li><strong>void setup():</strong> Runs once to initialize settings.</li>
-          <li><strong>pinMode(LED_BUILTIN, OUTPUT):</strong> Sets the LED pin as output.</li>
-          <li><strong>void loop():</strong> Runs repeatedly after setup.</li>
-          <li><strong>digitalWrite(LED_BUILTIN, HIGH):</strong> Turns the LED on.</li>
-          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
-          <li><strong>digitalWrite(LED_BUILTIN, LOW):</strong> Turns the LED off.</li>
-          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
-        </ul>
+      <!-- Setup & Loop -->
+      <h2 id="setup-loop" class="info-title">Setup & Loop Functions</h2>
+      <div class="info-box">
+        <p>The <b>setup()</b> function runs once when your Arduino board starts, and <b>loop()</b> runs repeatedly as long as the board is powered. Every Arduino program (called a sketch) needs these functions to work properly.</p>
       </div>
+
     </div>
   </div>
 </section>
-
-<!-- Setup & Loop Section -->
-<section class="components-section">
-  <h2 class="section-title">6. setup() and loop() Explanation</h2>
-
-  <div class="components-border">
-    <div class="components-row">
-
-      <!-- setup() Card -->
-     <!-- Setup & Loop Section -->
-
-    
-    <!-- setup() -->
-    <div class="info-box" style="margin-bottom: 20px;">
-      <div class="info-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/BuzzerCode1.png" alt="setup()">
-      </div>
-      <div class="info-text">
-        <h3>setup()</h3>
-        <ul style="margin-left: 15px;">
-          <li>Runs only once</li>
-          <li>Used for setting up the pins</li>
-          <li>Defines the location of the pins</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- loop() -->
-    <div class="info-box">
-      <div class="info-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Arduino_IDE_-_Blink.png" alt="loop()">
-      </div>
-      <div class="info-text">
-        <h3>loop()</h3>
-        <ul style="margin-left: 15px;">
-          <li>Runs repeatedly</li>
-          <li>Main code execution</li>
-          <li>Controls the flow of your program</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-  
 
 <!-- FOOTER -->
 <footer>
-   <div class="footer-section">
-     <h3>About Arduino Hub</h3>
-     <p>Learn Arduino step by step with simple projects, guides, and code examples. Explore creativity through technology!</p>
-   </div>
-
-
-   <div class="footer-section">
-     <h3>Quick Links</h3>
-     <ul>
-       <li><a href="index.html">🏠 Home</a></li>
-       <li><a href="website2.html">📘 Basics</a></li>
-       <li><a href="about.html">😄 About me</a></li>
-     </ul>
-   </div>
-
-
-   <div class="footer-section">
-     <h3>Contact & Socials</h3>
-     <p>📧 tshering.yangtshokl2023@academy.bt<br>📍 Bhutan</p>
-     <div class="social-icons">
-       <a href="#">🌐</a>
-       <a href="#">💬</a>
-       <a href="#">🐦</a>
-     </div>
-   </div>
- </footer>
-
-
- <div class="footer-bottom">
-   © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
- </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="footer-section">
+    <h3>About Arduino</h3>
+    <p>Learn electronics and programming using Arduino boards. Open-source platform for everyone!</p>
+  </div>
+  <div class="footer-section">
+    <h3>Resources</h3>
+    <ul>
+      <li><a href="#">Official Arduino</a></li>
+      <li><a href="#">Arduino Forum</a></li>
+      <li><a href="#">Arduino Docs</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Contact</h3>
+    <ul>
+      <li>Email: info@arduinohub.com</li>
+      <li>Phone: +1-234-567-890</li>
+      <li>Address: 123 Arduino St., Tech City</li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">© 2025 Arduino Learning Hub. All rights reserved.</div>
+
+<!-- SCROLL HIGHLIGHT SCRIPT -->
+<script>
+const links = document.querySelectorAll('.phone-icon');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    
+    // Scroll smoothly
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Add highlight
+    target.classList.add('highlight');
+    
+    // Remove highlight after 2 seconds
+    setTimeout(() => {
+      target.classList.remove('highlight');
+    }, 2000);
+  });
+});
+</script>
+
+</body>
+</html>
