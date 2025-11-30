@@ -44,21 +44,31 @@ body {
   padding: 60px 50px;
 }
 
-/* Layout: phone + info in a row */
 .flex-container {
   display: flex;
+  align-items: flex-start; /* important */
   gap: 40px;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-/* Phone Menu */
+/* Make the sidebar sticky */
+.topic-container {
+  flex: 0 0 150px;  /* fixed width */
+}
+
 .phone-frame {
+  position: sticky;
+  top: 80px;   /* distance from top of viewport */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: #1A4F8B;
   border-radius: 15px;
   padding: 10px;
   width: 130px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+}
+
 }
 .icon-grid { display: flex; flex-direction: column; gap: 12px; }
 
@@ -426,36 +436,31 @@ footer {
 <section class="content-section">
   <h1 class="left-title">Arduino Basics</h1>
 
-  <div class="flex-container">
+ <div class="flex-container">
 
-    <!-- PHONE MENU -->
-    <div class="main-layout">
-      <div class="topic-container">
-        <div class="phone-frame">
-          <div class="icon-grid">
-            <a class="phone-icon" style="--i:1;">
-              <div class="icon">💡</div>
-              <div class="icon-label">Board Overview</div>
-            </a>
-            <a class="phone-icon" style="--i:2;">
-              <div class="icon">🔧</div>
-              <div class="icon-label">Components</div>
-            </a>
-            <a class="phone-icon" style="--i:3;">
-              <div class="icon">💻</div>
-              <div class="icon-label">Install IDE</div>
-            </a>
-            <a class="phone-icon" style="--i:4;">
-              <div class="icon">🖥️</div>
-              <div class="icon-label">First Program</div>
-            </a>
-            <a class="phone-icon" style="--i:5;">
-              <div class="icon">🔄</div>
-              <div class="icon-label">Setup & Loop</div>
-            </a>
-          </div>
-        </div>
-      </div>
+  <!-- PHONE MENU -->
+  <div class="topic-container">
+    <div class="phone-frame">
+      <a class="phone-icon" style="--i:1;">
+        <div class="icon">💡</div>
+        <div class="icon-label">Board Overview</div>
+      </a>
+      <a class="phone-icon" style="--i:2;">
+        <div class="icon">🔧</div>
+        <div class="icon-label">Components</div>
+      </a>
+      <a class="phone-icon" style="--i:3;">
+        <div class="icon">💻</div>
+        <div class="icon-label">Install IDE</div>
+      </a>
+      <a class="phone-icon" style="--i:4;">
+        <div class="icon">🖥️</div>
+        <div class="icon-label">First Program</div>
+      </a>
+      <a class="phone-icon" style="--i:5;">
+        <div class="icon">🔄</div>
+        <div class="icon-label">Setup & Loop</div>
+      </a>
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
@@ -745,6 +750,7 @@ void loop() {
  <div class="footer-bottom">
    © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
  </div>
+
 
 
 
