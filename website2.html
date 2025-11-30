@@ -48,15 +48,16 @@ body {
 /* Layout: phone + info in a row */
 .flex-container {
   display: flex;
+  align-items: flex-start; /* important */
   gap: 40px;
-  align-items: flex-start;
-  position: relative; /* needed for sidebar positioning */
 }
 
-/* Sticky Sidebar */
+/* Make the sidebar sticky */
 .topic-container {
-  flex: 0 0 150px;    /* fixed width for sidebar */
+  flex: 0 0 150px;  /* fixed width */
 }
+
+
 
 /* Sticky Sidebar */
 .phone-frame {
@@ -432,37 +433,40 @@ footer {
 <section class="content-section">
   <h1 class="left-title">Arduino Basics</h1>
 
-  <div class="flex-container">
+ <div class="flex-container">
 
-    <!-- PHONE MENU -->
-    <div class="main-layout">
-      <div class="topic-container">
-        <div class="phone-frame">
-          <div class="icon-grid">
-            <a class="phone-icon" style="--i:1;">
-              <div class="icon">💡</div>
-              <div class="icon-label">Board Overview</div>
-            </a>
-            <a class="phone-icon" style="--i:2;">
-              <div class="icon">🔧</div>
-              <div class="icon-label">Components</div>
-            </a>
-            <a class="phone-icon" style="--i:3;">
-              <div class="icon">💻</div>
-              <div class="icon-label">Install IDE</div>
-            </a>
-            <a class="phone-icon" style="--i:4;">
-              <div class="icon">🖥️</div>
-              <div class="icon-label">First Program</div>
-            </a>
-            <a class="phone-icon" style="--i:5;">
-              <div class="icon">🔄</div>
-              <div class="icon-label">Setup & Loop</div>
-            </a>
-          </div>
-        </div>
-      </div>
+  <!-- PHONE MENU -->
+  <div class="topic-container">
+    <div class="phone-frame">
+      <a class="phone-icon" style="--i:1;">
+        <div class="icon">💡</div>
+        <div class="icon-label">Board Overview</div>
+      </a>
+      <a class="phone-icon" style="--i:2;">
+        <div class="icon">🔧</div>
+        <div class="icon-label">Components</div>
+      </a>
+      <a class="phone-icon" style="--i:3;">
+        <div class="icon">💻</div>
+        <div class="icon-label">Install IDE</div>
+      </a>
+      <a class="phone-icon" style="--i:4;">
+        <div class="icon">🖥️</div>
+        <div class="icon-label">First Program</div>
+      </a>
+      <a class="phone-icon" style="--i:5;">
+        <div class="icon">🔄</div>
+        <div class="icon-label">Setup & Loop</div>
+      </a>
     </div>
+  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="arduino-info">
+    <!-- all your content -->
+  </div>
+
+</div>
 
     <!-- RIGHT SIDE CONTENT -->
       <div class="arduino-info">
@@ -755,6 +759,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
