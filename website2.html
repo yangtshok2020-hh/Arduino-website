@@ -50,21 +50,22 @@ body {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  flex-wrap: wrap;
+  position: relative; /* needed for sidebar positioning */
 }
 
-/* Phone Menu */
+/* Sticky Sidebar */
 .phone-frame {
-  background: #1A4F8B;
+  position: sticky;      /* keeps it visible while scrolling */
+  top: 80px;             /* distance from top of viewport (adjust for your top-bar) */
+  align-self: flex-start; /* ensures it doesn’t stretch */
+  width: 130px;
   border-radius: 15px;
   padding: 10px;
-  width: 130px;
+  background: #1A4F8B;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 20px;
 }
-.icon-grid { display: flex; flex-direction: column; gap: 12px; }
 
+/* Make sure the icons still animate properly */
 .phone-icon {
   display: flex;
   flex-direction: column;
@@ -76,7 +77,6 @@ body {
   transition: 0.3s ease;
 }
 .phone-icon:hover { transform: scale(1.1) rotate(-2deg); }
-
 .icon {
   width: 55px;
   height: 55px;
@@ -749,6 +749,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
