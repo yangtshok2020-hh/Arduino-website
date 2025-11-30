@@ -751,20 +751,11 @@ void loop() {
    © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
  </div>
 
- <script>
-    const topic = document.querySelector('.topic-container');
-    const parent = topic.parentElement;
-    const maxY = parent.offsetHeight - topic.offsetHeight;
 
-    window.addEventListener('scroll', () => {
-      let scrollY = window.scrollY - parent.offsetTop + 20;
-      let moveY = Math.min(Math.max(scrollY, 0), maxY);
-      topic.style.transform = `translateY(${moveY}px)`;
-    });
-  </script>
 
 </body>
 </html>
+
 
 
 
