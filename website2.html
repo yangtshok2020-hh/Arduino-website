@@ -54,14 +54,20 @@ body {
 }
 
 /* Sticky Sidebar */
+.topic-container {
+  flex: 0 0 150px;    /* fixed width for sidebar */
+}
+
+/* Sticky Sidebar */
 .phone-frame {
-  position: sticky;      /* keeps it visible while scrolling */
-  top: 80px;             /* distance from top of viewport (adjust for your top-bar) */
-  align-self: flex-start; /* ensures it doesn’t stretch */
-  width: 130px;
-  border-radius: 15px;
-  padding: 10px;
+  position: sticky;      /* sticks as you scroll */
+  top: 80px;             /* space from top */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: #1A4F8B;
+  padding: 15px;
+  border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
@@ -749,6 +755,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
