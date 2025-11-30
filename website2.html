@@ -46,28 +46,23 @@ body {
 }
 
 /* Layout: phone + info in a row */
+/* Layout: phone + info in a row */
 .flex-container {
   display: flex;
-  align-items: flex-start; /* important */
   gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-
-
-
-
-/* Sticky Sidebar */
+/* Phone Menu */
 .phone-frame {
-  position: sticky;      /* sticks as you scroll */
-  top: 80px;             /* space from top */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   background: #1A4F8B;
-  padding: 15px;
   border-radius: 15px;
+  padding: 10px;
+  width: 130px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
+
 
 /* Make sure the icons still animate properly */
 .phone-icon {
@@ -756,6 +751,7 @@ void loop() {
 
 </body>
 </html>
+
 
 
 
