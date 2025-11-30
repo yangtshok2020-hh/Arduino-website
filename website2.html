@@ -58,20 +58,21 @@ body {
 }
 
 .phone-frame {
-  position: sticky;
-  top: 20px;  /* distance from top of viewport */
+  position: sticky;      /* makes it stick after scrolling */
+  top: 80px;             /* distance from the top of viewport before sticking */
   display: flex;
   flex-direction: column;
   gap: 20px;
   background: #1A4F8B;
   border-radius: 15px;
-  padding: 10px;
+  padding: 15px;
   width: 130px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-
+  transition: 0.3s ease;
+  z-index: 10;           /* keeps it above other elements if overlapping */
 }
-.icon-grid { display: flex; flex-direction: column; gap: 12px; }
 
+/* Icons inside phone-frame */
 .phone-icon {
   display: flex;
   flex-direction: column;
@@ -95,13 +96,13 @@ body {
   font-size: 1.5rem;
   box-shadow: 0 3px 10px rgba(0,0,0,0.10);
 }
+
 .icon-label { font-size: 13px; font-weight: 600; color: #A5E0FF; }
 
 @keyframes popIn {
   0% { transform: translateY(40px) scale(0); opacity: 0; }
   60% { transform: translateY(-10px) scale(1.1); opacity: 1; }
   100% { transform: translateY(0) scale(1); opacity: 1; }
-}
 
 /* Information Container */
 .arduino-info {
@@ -755,6 +756,7 @@ void loop() {
  <div class="footer-bottom">
    © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
  </div>
+
 
 
 
