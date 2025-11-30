@@ -44,34 +44,22 @@ body {
   padding: 60px 50px;
 }
 
-
 /* Layout: phone + info in a row */
 .flex-container {
   display: flex;
-  align-items: flex-start; /* important */
   gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-/* Make the sidebar sticky */
-.topic-container {
-  flex: 0 0 150px;  /* fixed width */
-}
-
+/* Phone Menu */
 .phone-frame {
-  position: sticky;      /* makes it stick after scrolling */
-  top: 80px;             /* distance from the top of viewport before sticking */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   background: #1A4F8B;
   border-radius: 15px;
-  padding: 15px;
+  padding: 10px;
   width: 130px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-  z-index: 10;           /* keeps it above other elements if overlapping */
 }
-
 .icon-grid { display: flex; flex-direction: column; gap: 12px; }
 
 .phone-icon {
@@ -407,6 +395,7 @@ footer {
   display: flex;
   gap: 20px;
 }
+
 
 
 </style>
@@ -757,6 +746,7 @@ void loop() {
  <div class="footer-bottom">
    © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
  </div>
+
 
 
 
