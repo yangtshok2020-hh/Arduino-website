@@ -289,6 +289,7 @@ footer {
 <body>
 
 <!-- TOP BAR -->
+<!-- TOP BAR -->
 <div class="top-bar">
   <div class="logo">Arduino Hub</div>
   <nav class="navbar"> 
@@ -298,55 +299,51 @@ footer {
   </nav>
 </div>
 
-<!-- BANNER -->
+<!-- MAIN BANNER -->
 <section class="main-banner">
   <h1>Arduino Learning Hub</h1>
 </section>
 
 <!-- CONTENT -->
 <section class="content-section">
-  <h1 class="left-title">Arduino Basics</h1>
+  <h2 class="section-title">Arduino Basics</h2>
 
   <div class="flex-container">
 
     <!-- PHONE MENU -->
-    <div class="main-layout">
-      <div class="topic-container">
-        <div class="phone-frame">
-          <div class="icon-grid">
-            <a class="phone-icon" style="--i:1;">
-              <div class="icon">💡</div>
-              <div class="icon-label">Board Overview</div>
-            </a>
-            <a class="phone-icon" style="--i:2;">
-              <div class="icon">🔧</div>
-              <div class="icon-label">Components</div>
-            </a>
-            <a class="phone-icon" style="--i:3;">
-              <div class="icon">💻</div>
-              <div class="icon-label">Install IDE</div>
-            </a>
-            <a class="phone-icon" style="--i:4;">
-              <div class="icon">🖥️</div>
-              <div class="icon-label">First Program</div>
-            </a>
-            <a class="phone-icon" style="--i:5;">
-              <div class="icon">🔄</div>
-              <div class="icon-label">Setup & Loop</div>
-            </a>
-          </div>
-        </div>
+    <div class="phone-frame">
+      <div class="icon-grid">
+        <a class="phone-icon" style="--i:1;">
+          <div class="icon">💡</div>
+          <div class="icon-label">Board Overview</div>
+        </a>
+        <a class="phone-icon" style="--i:2;">
+          <div class="icon">🔧</div>
+          <div class="icon-label">Components</div>
+        </a>
+        <a class="phone-icon" style="--i:3;">
+          <div class="icon">💻</div>
+          <div class="icon-label">Install IDE</div>
+        </a>
+        <a class="phone-icon" style="--i:4;">
+          <div class="icon">🖥️</div>
+          <div class="icon-label">First Program</div>
+        </a>
+        <a class="phone-icon" style="--i:5;">
+          <div class="icon">🔄</div>
+          <div class="icon-label">Setup & Loop</div>
+        </a>
       </div>
     </div>
 
-    <!-- RIGHT SIDE CONTENT -->
-      <div class="arduino-info">
+    <!-- ARDUINO INFO -->
+    <div class="arduino-info">
 
-      <!-- What is Arduino -->
-      <h2 class="info-title">What is Arduino?</h2>
+      <!-- WHAT IS ARDUINO -->
+      <h3 class="info-title">What is Arduino?</h3>
       <div class="info-box">
         <div class="info-image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno Board">
         </div>
         <div class="info-text">
           <p>
@@ -357,241 +354,77 @@ footer {
         </div>
       </div>
 
-      <!-- Board Overview -->
-      <h2 class="info-title">Board Overview</h2>
+      <!-- BOARD OVERVIEW -->
+      <h3 class="info-title">Board Overview</h3>
       <div class="board-overview">
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Arduino_usb_socket-1.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Arduino_usb_socket-1.jpg" alt="USB Port">
           <p><strong>USB Port</strong><br>Upload Code</p>
         </div>
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/DC_Barrel_Power_Jack_Connector_%28SMD%29_%2812311783276%29.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/DC_Barrel_Power_Jack_Connector_%28SMD%29_%2812311783276%29.jpg" alt="Power Jack">
           <p><strong>Power Jack</strong><br>External Power</p>
         </div>
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/ArduinoDigitalPins.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/ArduinoDigitalPins.jpg" alt="Digital Pins">
           <p><strong>Digital Pins</strong><br>Sensors & LEDs</p>
         </div>
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_diecimila_pcb_top.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Arduino_diecimila_pcb_top.jpg" alt="Analog Pins">
           <p><strong>Analog Pins</strong><br>Measure Values</p>
         </div>
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Arduino_push_button-1.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Arduino_push_button-1.jpg" alt="Reset Button">
           <p><strong>Reset Button</strong><br>Restart Board</p>
         </div>
-
         <div class="component-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Noname_clone_of_Arduino_Uno_-_Mega328P_microcontroller.jpg" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Noname_clone_of_Arduino_Uno_-_Mega328P_microcontroller.jpg" alt="Microcontroller">
           <p><strong>Microcontroller</strong><br>The Brain</p>
         </div>
-
       </div>
 
     </div>
-
   </div>
 </section>
 
-
+<!-- Required Components Section -->
 <section class="components-section">
   <h2 class="section-title">Required Components</h2>
-
   <div class="components-border">
     <div class="components-row">
-
-      <!-- Arduino Uno -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
         <h3>Arduino Uno</h3>
         <p>Main board for all projects.</p>
       </div>
-
-      <!-- USB Cable -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/USB_A_%26_B_cable.agr.jpg" alt="USB Cable">
         <h3>USB Cable</h3>
         <p>Used to upload code.</p>
       </div>
-
-      <!-- Breadboard -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/400_points_breadboard.jpg" alt="Breadboard">
         <h3>Breadboard</h3>
         <p>No-solder testing board.</p>
       </div>
-
-      <!-- Jumper Wires -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/A_few_Jumper_Wires.jpg" alt="Jumper Wires">
         <h3>Jumper Wires</h3>
         <p>Connect components.</p>
       </div>
-
-      <!-- LEDs -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/5mm_LED_Light-emitting_diode_Red_1480277_8_9_HDR_Intensive.jpg" alt="LEDs">
         <h3>LEDs</h3>
         <p>Light indicators.</p>
       </div>
-
-      <!-- Resistors -->
       <div class="component-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/3_Resistors.jpg" alt="Resistors">
         <h3>Resistors</h3>
         <p>Control current flow.</p>
       </div>
-
     </div>
   </div>
 </section>
-
-
-
-<section class="install-section">
-  <h2 class="install-title">4. How to Install Arduino IDE</h2>
-
-  <div class="install-steps">
-
-    <!-- Step 1 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Arduino_IDE_logo.svg" alt="Download">
-      <div>
-        <h3>Where to Download</h3>
-        <p>Get the latest Arduino IDE from the official Arduino website.</p>
-      </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/U%2B1F863_WIDE-HEADED_DOWNWARDS_LIGHT_BARB_ARROW.svg" alt="Install">
-      <div>
-        <h3>How to Install</h3>
-        <p>Run the installer and follow the simple steps to install the IDE.</p>
-      </div>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Select_Board_Arduino_Uno.png" alt="Board Select">
-      <div>
-        <h3>Selecting the Board</h3>
-        <p>Go to <b>Tools → Board</b> and choose your Arduino model.</p>
-      </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="install-step">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SuccessfulIInstall.png" alt="COM Port">
-      <div>
-        <h3>Selecting the COM Port</h3>
-        <p>Go to <b>Tools → Port</b> and select the port your board is connected to.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- First Program: Blink Section -->
-<section class="content-section">
-  <div class="install-section">
-    <h2 class="info-title">Your First Program: Blink</h2>
-
-    <div class="info-box" style="flex-direction: column; align-items: flex-start;">
-      <!-- Explanation -->
-      <div class="info-image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/5mm_Cycling_RGB_LED.jpg" alt="Arduino Uno">
-        </div>
-      <div class="info-text" style="margin-bottom: 20px;">
-        <p><strong>What Blink does:</strong> Makes an LED blink on your Arduino board at a set interval.</p>
-      </div>
-
-      <!-- Code Example -->
-      <div class="info-text" style="margin-bottom: 20px;">
-        <p><strong>Code Example:</strong></p>
-        <pre style="background: #f0f0f0; padding: 15px; border-radius: 10px; font-family: monospace; overflow-x: auto;">
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT); // Set the built-in LED pin as output
-}
-
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH); // Turn LED on
-  delay(1000);                     // Wait 1 second
-  digitalWrite(LED_BUILTIN, LOW);  // Turn LED off
-  delay(1000);                     // Wait 1 second
-}
-        </pre>
-      </div>
-
-      <!-- Line-by-line Explanation -->
-      <div class="info-text">
-        <p><strong>Explanation of each line:</strong></p>
-        <ul style="margin-left: 20px;">
-          <li><strong>void setup():</strong> Runs once to initialize settings.</li>
-          <li><strong>pinMode(LED_BUILTIN, OUTPUT):</strong> Sets the LED pin as output.</li>
-          <li><strong>void loop():</strong> Runs repeatedly after setup.</li>
-          <li><strong>digitalWrite(LED_BUILTIN, HIGH):</strong> Turns the LED on.</li>
-          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
-          <li><strong>digitalWrite(LED_BUILTIN, LOW):</strong> Turns the LED off.</li>
-          <li><strong>delay(1000):</strong> Waits for 1 second.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Setup & Loop Section -->
-<section class="components-section">
-  <h2 class="section-title">6. setup() and loop() Explanation</h2>
-
-  <div class="components-border">
-    <div class="components-row">
-
-      <!-- setup() Card -->
-     <!-- Setup & Loop Section -->
-
-    
-    <!-- setup() -->
-    <div class="info-box" style="margin-bottom: 20px;">
-      <div class="info-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/BuzzerCode1.png" alt="setup()">
-      </div>
-      <div class="info-text">
-        <h3>setup()</h3>
-        <ul style="margin-left: 15px;">
-          <li>Runs only once</li>
-          <li>Used for setting up the pins</li>
-          <li>Defines the location of the pins</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- loop() -->
-    <div class="info-box">
-      <div class="info-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Arduino_IDE_-_Blink.png" alt="loop()">
-      </div>
-      <div class="info-text">
-        <h3>loop()</h3>
-        <ul style="margin-left: 15px;">
-          <li>Runs repeatedly</li>
-          <li>Main code execution</li>
-          <li>Controls the flow of your program</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-  
 
 <!-- FOOTER -->
 <footer>
@@ -599,8 +432,6 @@ void loop() {
      <h3>About Arduino Hub</h3>
      <p>Learn Arduino step by step with simple projects, guides, and code examples. Explore creativity through technology!</p>
    </div>
-
-
    <div class="footer-section">
      <h3>Quick Links</h3>
      <ul>
@@ -609,28 +440,27 @@ void loop() {
        <li><a href="about.html">😄 About me</a></li>
      </ul>
    </div>
-
-
    <div class="footer-section">
      <h3>Contact & Socials</h3>
      <p>📧 tshering.yangtshokl2023@academy.bt<br>📍 Bhutan</p>
      <div class="social-icons">
-       <a href="#">🌐</a>
-       <a href="#">💬</a>
-       <a href="#">🐦</a>
+       <a href="#" aria-label="Website">🌐</a>
+       <a href="#" aria-label="Chat">💬</a>
+       <a href="#" aria-label="Twitter">🐦</a>
      </div>
    </div>
  </footer>
 
+<div class="footer-bottom">
+  © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
+</div>
 
- <div class="footer-bottom">
-   © 2025 Arduino Learning Hub | Made with 💚 by Yangtshok
- </div>
 
 
 
 </body>
 </html>
+
 
 
 
